@@ -1,0 +1,9 @@
+id: 51edbfb5-fc8b-4be8-a93b-450beb68cb98
+method: GET
+url: http://localhost:8774/api/v1/secrets?page=0&per_page=20
+status: 429
+durationMs: 1
+responseSize: 20
+timestamp: 2026-05-20T18:07:59.587196846Z
+collection: null
+requestName: null

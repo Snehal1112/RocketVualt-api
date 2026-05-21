@@ -1,0 +1,11 @@
+uid: 35c5138e-b40e-47a0-932e-e066d9b8cb7d
+info:
+  name: List Access Policies
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/access-policies'
+  auth:
+    type: bearer
+    token: '{{token}}'

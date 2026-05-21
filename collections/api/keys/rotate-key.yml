@@ -1,0 +1,11 @@
+uid: cc349b93-b311-450c-8ea4-ec0567dc3b67
+info:
+  name: Rotate Key
+  type: http
+  seq: 6
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/keys/{{key_id}}/rotate'
+  auth:
+    type: bearer
+    token: '{{token}}'

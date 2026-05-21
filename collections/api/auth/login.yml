@@ -1,0 +1,21 @@
+uid: cda93ab6-89dc-494f-bd0a-ff0dca742bd7
+info:
+  name: Login
+  type: http
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/users/login'
+  body:
+    type: json
+    data: |-
+      {
+        "username": "{{username}}",
+        "password": "{{password}}",
+        "totp_code": "{{totp_code}}"
+      }
+settings:
+  encodeUrl: true
+  timeout: 0.0
+  followRedirects: true
+  maxRedirects: 5.0
+  verifySsl: true

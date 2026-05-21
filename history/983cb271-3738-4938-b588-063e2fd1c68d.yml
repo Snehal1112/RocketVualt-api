@@ -1,0 +1,9 @@
+id: 983cb271-3738-4938-b588-063e2fd1c68d
+method: POST
+url: http://localhost:8080/api/v1/users/login
+status: 200
+durationMs: 184
+responseSize: 575
+timestamp: 2026-05-17T16:57:52.993362931Z
+collection: null
+requestName: null

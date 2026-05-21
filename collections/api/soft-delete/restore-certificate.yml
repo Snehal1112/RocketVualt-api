@@ -1,0 +1,11 @@
+uid: c9b944ef-2f7d-4998-8cc4-9de8f745c08e
+info:
+  name: Restore Deleted Certificate
+  type: http
+  seq: 8
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/deleted/certificates/{{certificate_id}}/restore'
+  auth:
+    type: bearer
+    token: '{{token}}'

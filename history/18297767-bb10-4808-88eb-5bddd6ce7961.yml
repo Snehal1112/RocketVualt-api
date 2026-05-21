@@ -1,0 +1,9 @@
+id: 18297767-bb10-4808-88eb-5bddd6ce7961
+method: GET
+url: http://localhost:8080/api/v1/users/1e18149a-ea17-4549-8166-b07cf4225350
+status: 200
+durationMs: 1
+responseSize: 122
+timestamp: 2026-05-17T14:49:59.553615832Z
+collection: null
+requestName: null

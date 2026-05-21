@@ -1,0 +1,17 @@
+uid: 55a8883b-4680-47e4-a163-93bbfa1a7efd
+info:
+  name: Update Access Policy
+  type: http
+  seq: 4
+http:
+  method: PUT
+  url: '{{base_url}}/api/v1/access-policies/{{policy_id}}'
+  body:
+    type: json
+    data: |-
+      {
+        "effect": "deny"
+      }
+  auth:
+    type: bearer
+    token: '{{token}}'

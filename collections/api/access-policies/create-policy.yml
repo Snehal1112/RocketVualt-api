@@ -1,0 +1,21 @@
+uid: 5b19d23e-9c8e-4730-818d-bec94f3ba493
+info:
+  name: Create Access Policy
+  type: http
+  seq: 3
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/access-policies'
+  body:
+    type: json
+    data: |-
+      {
+        "principal_id": "{{user_id}}",
+        "principal_type": "user",
+        "resource_type": "secrets",
+        "operation": "get",
+        "effect": "allow"
+      }
+  auth:
+    type: bearer
+    token: '{{token}}'

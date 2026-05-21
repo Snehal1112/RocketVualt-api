@@ -1,0 +1,18 @@
+uid: a6dde601-6786-4675-960f-dbc7d14b22c6
+info:
+  name: Update Key
+  type: http
+  seq: 4
+http:
+  method: PUT
+  url: '{{base_url}}/api/v1/keys/{{key_id}}'
+  body:
+    type: json
+    data: |-
+      {
+        "name": "my-rsa-key-updated",
+        "tags": ["env:prod"]
+      }
+  auth:
+    type: bearer
+    token: '{{token}}'

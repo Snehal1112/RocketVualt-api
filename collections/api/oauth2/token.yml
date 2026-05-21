@@ -1,0 +1,16 @@
+uid: 83c6131d-83e1-4fdc-a665-6c14da42007f
+info:
+  name: OAuth2 Client Credentials Token
+  type: http
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/oauth2/token'
+  auth:
+    type: bearer
+    token: '{{token}}'
+settings:
+  encodeUrl: true
+  timeout: 0.0
+  followRedirects: true
+  maxRedirects: 5.0
+  verifySsl: true

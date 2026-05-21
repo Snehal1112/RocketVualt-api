@@ -1,0 +1,8 @@
+opencollection: 1.0.0
+uid: d65099ec-2f36-46fc-9d69-3a5af2811808
+info:
+  name: api
+request:
+  variables:
+  - name: api_collection_pagesize
+    initial: '20'

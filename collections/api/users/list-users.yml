@@ -1,0 +1,43 @@
+uid: ed4992af-d541-4702-9cd6-7924df7cceba
+info:
+  name: List Users
+  type: http
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/users?page=0&per_page=%7B%7Brequest_page_size%7D%7D'
+  auth:
+    type: bearer
+    token: '{{token}}'
+runtime:
+  variables:
+  - name: request_page_size
+    initial: '10'
+  scripts:
+  - type: before-request
+    code: |-
+      console.log("status:", res.getStatus());
+      console.log("body:", res.getBody());
+  - type: after-response
+    code: |-
+      console.log("status:", res.getStatus());
+      console.log("body:", res.getBody());
+      rok.setVariable("request_page_sizessss", 300)
+  - type: tests
+    code: |-
+      rok.test("status is 200", () => {
+        rok.expect(res.getStatus()).toBe(200);
+      });
+  assertions:
+  - expression: res.status
+    operator: eq
+    value: '200'
+  - expression: res.body
+    operator: neq
+    value: '{"users":[{"id":"1e18149a-ea17-4549-8166-b07cf4225350","username":"testuser","role":"user","created_at":"2026-05-17T19:56:22+05:30"},{"id":"ff44a485-ec5c-455e-84fb-2a21a45111f3","username":"john","role":"user","created_at":"2026-05-16T22:42:19+05:30"},{"id":"ae891917-5d47-4013-8896-39af9613ed8b","username":"admin","role":"admin","created_at":"2026-05-16T22:26:39+05:30"}],"total":3}'
+    disabled: false
+settings:
+  encodeUrl: true
+  timeout: 0.0
+  followRedirects: true
+  maxRedirects: 5.0
+  verifySsl: true

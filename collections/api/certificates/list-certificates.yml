@@ -1,0 +1,11 @@
+uid: decf393c-2ee8-4c65-a83d-1a2b20b80891
+info:
+  name: List Certificates
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/certificates?page=0&per_page=20'
+  auth:
+    type: bearer
+    token: '{{token}}'

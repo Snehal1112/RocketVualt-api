@@ -1,0 +1,9 @@
+id: 000d6a42-cb4c-4375-9421-6347fdfc51dd
+method: GET
+url: http://localhost:8774/api/v1/users?page=0&per_page=%7B%7Bapi_collection_pagesize%7D%7D
+status: 401
+durationMs: 1
+responseSize: 28
+timestamp: 2026-05-20T17:37:12.098690898Z
+collection: null
+requestName: null

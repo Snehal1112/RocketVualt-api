@@ -1,0 +1,11 @@
+uid: c1312f19-0ecc-4675-afd6-86dd4550258f
+info:
+  name: Purge Certificate (Permanent Delete)
+  type: http
+  seq: 9
+http:
+  method: DELETE
+  url: '{{base_url}}/api/v1/deleted/certificates/{{certificate_id}}/purge'
+  auth:
+    type: bearer
+    token: '{{token}}'

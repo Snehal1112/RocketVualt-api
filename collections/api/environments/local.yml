@@ -1,0 +1,26 @@
+name: local
+variables:
+- name: base_url
+  value: http://localhost:8774
+- name: token
+  value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYWU4OTE5MTctNWQ0Ny00MDEzLTg4OTYtMzlhZjk2MTNlZDhiIiwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODc3NCIsInN1YiI6ImFlODkxOTE3LTVkNDctNDAxMy04ODk2LTM5YWY5NjEzZWQ4YiIsImF1ZCI6WyJQQVNTV09SRF9NQU5BR0VSIl0sImV4cCI6MTc3OTM0ODc3OCwibmJmIjoxNzc5MzQ1MTc4LCJpYXQiOjE3NzkzNDUxNzh9.Hmy8kECWwAkuBpmkDtvEIrdBMviXcKC0SQOtFO0MTpY
+- name: username
+  value: admin
+- name: password
+  value: admin123
+- name: totp_code
+  value: '466791'
+- name: refresh_token
+  value: ca8ff9f4ed8c6ffb40a8ecf762431d4b768467f16cc51aa34c8487a900edb1a1
+- name: password,
+  value: ''
+- name: secret_id
+  value: b8888da8-366a-46d9-a107-d2436138a333
+- name: service_account_id
+  value: 414d984f-5f7f-455b-93fd-6a66a77c6746
+- name: version
+  value: '1'
+- name: user_id
+  value: 1e18149a-ea17-4549-8166-b07cf4225350
+- name: request_page_size
+  value: ''

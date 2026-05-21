@@ -1,0 +1,9 @@
+id: 2a60d9f1-3e8c-4b81-af8f-9f6d08f0cb08
+method: GET
+url: http://localhost:8774/api/v1/health/database
+status: 404
+durationMs: 2
+responseSize: 63
+timestamp: 2026-05-20T10:48:15.680229540Z
+collection: null
+requestName: null

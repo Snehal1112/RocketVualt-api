@@ -1,0 +1,9 @@
+id: ee7c76ac-1a4c-42fb-b83d-a8949d509fee
+method: GET
+url: http://localhost:8080/api/v1/users?page=0&per_page=20
+status: 429
+durationMs: 1
+responseSize: 20
+timestamp: 2026-05-17T17:09:33.732539131Z
+collection: null
+requestName: null

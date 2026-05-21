@@ -1,0 +1,9 @@
+id: 4cd3af08-d3d5-4e4f-abed-8d87ee897a9f
+method: GET
+url: http://localhost:8080/api/v1/secrets?page=0&per_page=20
+status: 200
+durationMs: 2
+responseSize: 301
+timestamp: 2026-05-17T14:50:10.907342600Z
+collection: null
+requestName: null

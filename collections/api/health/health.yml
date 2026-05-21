@@ -1,0 +1,13 @@
+uid: e1e1770b-5b22-4cdb-8c82-02d63b518f13
+info:
+  name: health
+  type: http
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/health/database'
+settings:
+  encodeUrl: true
+  timeout: 0.0
+  followRedirects: true
+  maxRedirects: 5.0
+  verifySsl: true
