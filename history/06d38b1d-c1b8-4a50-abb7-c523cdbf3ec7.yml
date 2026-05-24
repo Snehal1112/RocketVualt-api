@@ -1,0 +1,9 @@
+id: 06d38b1d-c1b8-4a50-abb7-c523cdbf3ec7
+method: GET
+url: http://localhost:8774/api/v1/service-accounts
+status: 200
+durationMs: 1
+responseSize: 215
+timestamp: 2026-05-21T16:06:26.881927982Z
+collection: null
+requestName: null

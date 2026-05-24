@@ -1,0 +1,25 @@
+uid: 7c9e50b1-7009-4add-bd1a-cae125022747
+info:
+  name: Login
+  type: http
+  seq: 1
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/users/login'
+  body:
+    type: json
+    data: |-
+      {
+        "username": "{{username}}",
+        "password": "{{password}}",
+        "totp_code": "{{totp_code}}"
+      }
+runtime:
+  scripts:
+  - type: after-response
+    code: |-
+      const res = bru.response.getBody();
+      if (res && res.token) {
+        bru.setEnvVar("token", res.token);
+        console.log("Token captured successfully");
+      }

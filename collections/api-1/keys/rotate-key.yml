@@ -1,0 +1,11 @@
+uid: d8f5a7e0-4da1-43e0-b23b-3487b3bc407e
+info:
+  name: Rotate Key
+  type: http
+  seq: 6
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/keys/{{key_id}}/rotate'
+  auth:
+    type: bearer
+    token: '{{token}}'

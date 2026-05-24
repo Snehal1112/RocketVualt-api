@@ -1,0 +1,9 @@
+id: eb3bff30-79bb-4a85-81b4-a3edd147a0bc
+method: GET
+url: http://localhost:8774/api/v1/users?page=0&per_page=%7B%7Brequest_page_size%7D%7D
+status: 401
+durationMs: 2
+responseSize: 28
+timestamp: 2026-05-21T15:53:04.315005219Z
+collection: null
+requestName: null

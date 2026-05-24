@@ -3,7 +3,7 @@ variables:
 - name: base_url
   value: http://localhost:8774
 - name: token
-  value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYWU4OTE5MTctNWQ0Ny00MDEzLTg4OTYtMzlhZjk2MTNlZDhiIiwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODc3NCIsInN1YiI6ImFlODkxOTE3LTVkNDctNDAxMy04ODk2LTM5YWY5NjEzZWQ4YiIsImF1ZCI6WyJQQVNTV09SRF9NQU5BR0VSIl0sImV4cCI6MTc3OTM0ODc3OCwibmJmIjoxNzc5MzQ1MTc4LCJpYXQiOjE3NzkzNDUxNzh9.Hmy8kECWwAkuBpmkDtvEIrdBMviXcKC0SQOtFO0MTpY
+  value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNzNmMTZjOTUtNmQ2ZS00NmYyLWJjNTgtYjNkMmE3ZTUzZTFhIiwidXNlcm5hbWUiOiJjb25zdW1lci10ZXN0Iiwicm9sZSI6InNlcnZpY2VfYWNjb3VudCIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODc3NCIsInN1YiI6IjczZjE2Yzk1LTZkNmUtNDZmMi1iYzU4LWIzZDJhN2U1M2UxYSIsImF1ZCI6WyJQQVNTV09SRF9NQU5BR0VSIl0sImV4cCI6MTc3OTQyMzkwMiwibmJmIjoxNzc5NDIwMzAyLCJpYXQiOjE3Nzk0MjAzMDJ9.0_FNOzCSHk3EzgUj0rXppq4BFxQOJq8yH9jd3eAI-tA
 - name: username
   value: admin
 - name: password
@@ -15,7 +15,7 @@ variables:
 - name: password,
   value: ''
 - name: secret_id
-  value: b8888da8-366a-46d9-a107-d2436138a333
+  value: af0f5e89-bacb-45a1-9d4c-2a607ed992d3
 - name: service_account_id
   value: 414d984f-5f7f-455b-93fd-6a66a77c6746
 - name: version

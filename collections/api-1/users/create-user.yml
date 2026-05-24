@@ -1,0 +1,19 @@
+uid: 3c3ea386-7f9b-4ffc-b28e-07817b1c8257
+info:
+  name: Create User
+  type: http
+  seq: 3
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/users'
+  body:
+    type: json
+    data: |-
+      {
+        "username": "testuser",
+        "password": "password123",
+        "role": "user"
+      }
+  auth:
+    type: bearer
+    token: '{{token}}'

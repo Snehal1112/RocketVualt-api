@@ -1,0 +1,8 @@
+uid: f9df34d4-38a6-4fb7-a95b-31564985eab7
+info:
+  name: Health Check
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/health'

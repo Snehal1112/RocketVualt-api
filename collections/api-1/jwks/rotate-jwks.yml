@@ -1,0 +1,11 @@
+uid: 6c04252a-b867-4b3b-8636-690552b08510
+info:
+  name: Rotate JWKS
+  type: http
+  seq: 2
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/jwks/rotate'
+  auth:
+    type: bearer
+    token: '{{token}}'

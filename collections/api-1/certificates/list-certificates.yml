@@ -1,0 +1,11 @@
+uid: 22e514b5-9446-4791-a7de-63f4647a2a04
+info:
+  name: List Certificates
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/certificates?page=0&per_page=20'
+  auth:
+    type: bearer
+    token: '{{token}}'

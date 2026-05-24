@@ -5,9 +5,22 @@ info:
 http:
   method: POST
   url: '{{base_url}}/api/v1/oauth2/token'
-  auth:
-    type: bearer
-    token: '{{token}}'
+  headers:
+  - name: content-type
+    value: application/x-www-form-urlencoded
+  body:
+    type: form-urlencoded
+    data:
+    - name: grant_type
+      value: client_credentials
+    - name: client_id
+      value: consumer-test
+    - name: client_secret
+      value: 5712db674df31a96ccc014f4fb21ea42bcd74409594c0f74a37175d2180ca431
+runtime:
+  scripts:
+  - type: tests
+    code: ''
 settings:
   encodeUrl: true
   timeout: 0.0

@@ -20,3 +20,4 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+runtime: {}

@@ -1,0 +1,20 @@
+uid: ffba2a5e-5d2f-4bf5-9b0d-661e6552707b
+info:
+  name: Create Key
+  type: http
+  seq: 3
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/keys'
+  body:
+    type: json
+    data: |-
+      {
+        "name": "my-rsa-key",
+        "type": "RSA",
+        "bits": 2048,
+        "tags": ["env:dev"]
+      }
+  auth:
+    type: bearer
+    token: '{{token}}'

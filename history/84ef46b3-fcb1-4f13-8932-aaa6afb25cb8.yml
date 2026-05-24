@@ -1,0 +1,9 @@
+id: 84ef46b3-fcb1-4f13-8932-aaa6afb25cb8
+method: POST
+url: http://localhost:8774/api/v1/oauth2/token
+status: 400
+durationMs: 0
+responseSize: 35
+timestamp: 2026-05-21T18:17:35.613216917Z
+collection: null
+requestName: null

@@ -1,0 +1,11 @@
+uid: 735468aa-ec34-45f4-8d65-be4ffae22859
+info:
+  name: List Keys
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/keys?page=0&per_page=20'
+  auth:
+    type: bearer
+    token: '{{token}}'

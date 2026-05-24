@@ -1,0 +1,11 @@
+uid: dcc2036d-6ef0-4671-b05d-1f272426fb06
+info:
+  name: Purge Key (Permanent Delete)
+  type: http
+  seq: 6
+http:
+  method: DELETE
+  url: '{{base_url}}/api/v1/deleted/keys/{{key_id}}/purge'
+  auth:
+    type: bearer
+    token: '{{token}}'

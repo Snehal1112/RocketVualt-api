@@ -1,0 +1,9 @@
+id: 6780984c-6563-4fae-9050-ef6d224cfba1
+method: POST
+url: http://localhost:8774/api/v1/certificates
+status: 400
+durationMs: 2
+responseSize: 161
+timestamp: 2026-05-21T16:03:19.177343186Z
+collection: null
+requestName: null

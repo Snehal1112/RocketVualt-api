@@ -1,0 +1,11 @@
+uid: 35773227-45a8-439e-b5f6-ad3ead93408e
+info:
+  name: Delete Key
+  type: http
+  seq: 5
+http:
+  method: DELETE
+  url: '{{base_url}}/api/v1/keys/{{key_id}}'
+  auth:
+    type: bearer
+    token: '{{token}}'

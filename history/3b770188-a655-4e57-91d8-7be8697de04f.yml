@@ -1,0 +1,9 @@
+id: 3b770188-a655-4e57-91d8-7be8697de04f
+method: GET
+url: http://localhost:8774/api/v1/service-accounts/414d984f-5f7f-455b-93fd-6a66a77c6746
+status: 200
+durationMs: 1
+responseSize: 182
+timestamp: 2026-05-21T16:06:44.921586857Z
+collection: null
+requestName: null

@@ -1,0 +1,11 @@
+uid: 954c25d1-064d-40c4-a674-3a5630cd6a4b
+info:
+  name: Delete User
+  type: http
+  seq: 5
+http:
+  method: DELETE
+  url: '{{base_url}}/api/v1/users/{{user_id}}'
+  auth:
+    type: bearer
+    token: '{{token}}'

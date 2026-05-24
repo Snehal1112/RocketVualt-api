@@ -1,0 +1,11 @@
+uid: 81b7b9ae-8ebb-4070-a936-67b85c83aab4
+info:
+  name: Get Certificate
+  type: http
+  seq: 2
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/certificates/{{certificate_id}}'
+  auth:
+    type: bearer
+    token: '{{token}}'

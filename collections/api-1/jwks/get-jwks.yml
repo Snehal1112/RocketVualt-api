@@ -1,0 +1,8 @@
+uid: 7b80084a-f077-4433-b989-eeaf0ce16516
+info:
+  name: Get JWKS
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{base_url}}/jwks.json'

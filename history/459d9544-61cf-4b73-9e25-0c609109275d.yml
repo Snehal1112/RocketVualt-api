@@ -1,0 +1,9 @@
+id: 459d9544-61cf-4b73-9e25-0c609109275d
+method: POST
+url: http://localhost:8774/api/v1/keys
+status: 403
+durationMs: 1
+responseSize: 36
+timestamp: 2026-05-22T03:48:50.895359356Z
+collection: null
+requestName: null

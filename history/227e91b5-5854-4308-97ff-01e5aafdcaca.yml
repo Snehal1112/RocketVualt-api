@@ -1,0 +1,9 @@
+id: 227e91b5-5854-4308-97ff-01e5aafdcaca
+method: GET
+url: http://localhost:8774/api/v1/keys?page=0&per_page=20
+status: 200
+durationMs: 2
+responseSize: 12
+timestamp: 2026-05-21T16:05:10.737937929Z
+collection: null
+requestName: null

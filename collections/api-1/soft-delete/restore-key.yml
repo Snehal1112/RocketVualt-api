@@ -1,0 +1,11 @@
+uid: fe5bc9ae-a4a9-415f-bcd4-3812650a103f
+info:
+  name: Restore Deleted Key
+  type: http
+  seq: 5
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/deleted/keys/{{key_id}}/restore'
+  auth:
+    type: bearer
+    token: '{{token}}'

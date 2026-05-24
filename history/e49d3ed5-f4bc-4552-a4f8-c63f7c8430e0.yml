@@ -1,0 +1,9 @@
+id: e49d3ed5-f4bc-4552-a4f8-c63f7c8430e0
+method: POST
+url: http://localhost:8774/api/v1/service-accounts
+status: 201
+durationMs: 205
+responseSize: 285
+timestamp: 2026-05-21T16:07:05.390485271Z
+collection: null
+requestName: null

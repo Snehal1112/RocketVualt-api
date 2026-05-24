@@ -1,0 +1,9 @@
+id: 75212fcf-0053-48e9-a666-e5533d23e057
+method: POST
+url: http://localhost:8774/api/v1/oauth2/token
+status: 200
+durationMs: 183
+responseSize: 481
+timestamp: 2026-05-22T03:25:02.343697488Z
+collection: null
+requestName: null

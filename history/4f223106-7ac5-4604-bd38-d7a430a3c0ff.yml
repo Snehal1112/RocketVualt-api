@@ -1,0 +1,9 @@
+id: 4f223106-7ac5-4604-bd38-d7a430a3c0ff
+method: GET
+url: http://localhost:8774/api/v1/secrets/af0f5e89-bacb-45a1-9d4c-2a607ed992d3
+status: 200
+durationMs: 2
+responseSize: 150
+timestamp: 2026-05-21T20:04:31.795290751Z
+collection: null
+requestName: null

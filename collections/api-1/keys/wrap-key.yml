@@ -1,0 +1,18 @@
+uid: 1ddd4bc9-e055-4aff-9606-ce7aa81072a1
+info:
+  name: Wrap Key
+  type: http
+  seq: 7
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/keys/{{key_id}}/wrap'
+  body:
+    type: json
+    data: |-
+      {
+        "plaintext_key": "<base64-encoded-key-material>",
+        "algorithm": "RSA-OAEP"
+      }
+  auth:
+    type: bearer
+    token: '{{token}}'

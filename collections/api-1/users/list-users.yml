@@ -1,0 +1,11 @@
+uid: db22ceba-17f4-47ce-9cc4-43330de7a6ff
+info:
+  name: List Users
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/users?page=0&per_page=20'
+  auth:
+    type: bearer
+    token: '{{token}}'

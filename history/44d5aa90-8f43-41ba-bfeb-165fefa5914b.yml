@@ -1,0 +1,9 @@
+id: 44d5aa90-8f43-41ba-bfeb-165fefa5914b
+method: GET
+url: http://localhost:8774/api/v1/keys?page=0&per_page=20
+status: 200
+durationMs: 2
+responseSize: 12
+timestamp: 2026-05-22T03:48:10.408355517Z
+collection: null
+requestName: null
