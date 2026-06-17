@@ -1,0 +1,8 @@
+uid: f1c46480-183f-4f97-9174-311257d397fd
+info:
+  name: Get Config
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/config'

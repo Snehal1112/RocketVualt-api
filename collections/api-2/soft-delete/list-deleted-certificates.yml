@@ -1,0 +1,11 @@
+uid: 239058c8-9819-4a4f-b463-a853c52489cc
+info:
+  name: List Deleted Certificates
+  type: http
+  seq: 7
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/deleted/certificates'
+  auth:
+    type: bearer
+    token: '{{token}}'

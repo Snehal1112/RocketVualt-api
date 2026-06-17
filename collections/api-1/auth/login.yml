@@ -2,7 +2,6 @@ uid: 7c9e50b1-7009-4add-bd1a-cae125022747
 info:
   name: Login
   type: http
-  seq: 1
 http:
   method: POST
   url: '{{base_url}}/api/v1/users/login'
@@ -18,8 +17,17 @@ runtime:
   scripts:
   - type: after-response
     code: |-
-      const res = bru.response.getBody();
-      if (res && res.token) {
-        bru.setEnvVar("token", res.token);
-        console.log("Token captured successfully");
-      }
+      rok.setGlobalEnvVar("g-key", "snehal")
+      console.log("Env:", rok.getEnvName());
+      console.log("Res:-", res.getBody());
+      const value = res.getBody().request_id;
+      rok.setEnvVar("key", value);
+      console.log("Value:-",value)
+      rok.setEnvVar("key-1", value, { persist: true })
+      console.log("Value-1:-",value)
+settings:
+  encodeUrl: true
+  timeout: 0.0
+  followRedirects: true
+  maxRedirects: 5.0
+  verifySsl: true

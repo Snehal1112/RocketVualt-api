@@ -1,0 +1,9 @@
+id: 48d93f1f-3081-48de-94f2-edaf4dac44e1
+method: POST
+url: http://localhost:8774/api/v1/users/login
+status: 403
+durationMs: 190
+responseSize: 183
+timestamp: 2026-06-03T16:09:24.157772580Z
+collection: null
+requestName: null

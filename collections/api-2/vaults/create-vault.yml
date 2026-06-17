@@ -1,0 +1,21 @@
+uid: 9028a5c0-1ac1-4c12-ab43-cdf225d28dc6
+info:
+  name: Create Vault
+  type: http
+  seq: 1
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/vaults'
+  body:
+    type: json
+    data: |-
+      {
+        "name": "my-vault",
+        "enabled": true,
+        "purge_protection": false,
+        "retention_days": 90,
+        "tags": ["env:dev"]
+      }
+  auth:
+    type: bearer
+    token: '{{token}}'

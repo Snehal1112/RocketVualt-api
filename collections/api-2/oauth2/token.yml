@@ -1,0 +1,8 @@
+uid: 93d20d64-4569-4a53-ac8c-50ce134e3076
+info:
+  name: OAuth2 Client Credentials Token
+  type: http
+  seq: 1
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/oauth2/token'

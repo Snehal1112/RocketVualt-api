@@ -9,12 +9,14 @@ variables:
 - name: password
   value: admin123
 - name: totp_code
-  value: ''
+  value: '533173'
 - name: ca_cert_id
   value: ''
 - name: token,
   value: ''
-- name: password,
-  value: ''
 - name: totp_code
+  value: '230913'
+- name: policy_id
+  value: ''
+- name: user_id
   value: ''

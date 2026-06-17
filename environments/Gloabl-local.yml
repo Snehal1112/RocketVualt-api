@@ -1,0 +1,6 @@
+name: Gloabl-local
+variables:
+- name: dfff
+  value: '4333'
+- name: g-key
+  value: snehal

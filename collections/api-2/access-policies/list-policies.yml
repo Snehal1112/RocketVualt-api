@@ -1,0 +1,11 @@
+uid: 74694b7a-ddd1-42c9-a9b9-153e52931772
+info:
+  name: List Access Policies
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/access-policies'
+  auth:
+    type: bearer
+    token: '{{token}}'

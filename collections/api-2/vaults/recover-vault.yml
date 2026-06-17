@@ -1,0 +1,11 @@
+uid: a6e29547-4996-49fd-bced-d8413be0e161
+info:
+  name: Recover Vault
+  type: http
+  seq: 6
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/recover'
+  auth:
+    type: bearer
+    token: '{{token}}'

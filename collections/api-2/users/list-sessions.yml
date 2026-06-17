@@ -1,0 +1,11 @@
+uid: df30c5dd-64d8-4774-b60c-7d4c6c753ce9
+info:
+  name: List Sessions
+  type: http
+  seq: 6
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/users/sessions'
+  auth:
+    type: bearer
+    token: '{{token}}'

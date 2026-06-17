@@ -1,0 +1,11 @@
+uid: d6d6a734-b085-435b-ae61-a463fdbaf77a
+info:
+  name: List Keys
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/keys?page=0&per_page=20'
+  auth:
+    type: bearer
+    token: '{{token}}'

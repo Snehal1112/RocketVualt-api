@@ -1,0 +1,11 @@
+uid: 367c58b2-6bb9-445f-a24f-1f64fea5e474
+info:
+  name: Restore Deleted Key
+  type: http
+  seq: 5
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/deleted/keys/{{key_id}}/restore'
+  auth:
+    type: bearer
+    token: '{{token}}'

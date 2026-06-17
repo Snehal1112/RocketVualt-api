@@ -1,0 +1,9 @@
+id: da3f9e6e-b43f-43a5-9e5c-1d0934d667ed
+method: POST
+url: http://localhost:8774/api/v1/users/login
+status: 200
+durationMs: 187
+responseSize: 968
+timestamp: 2026-06-03T17:14:29.182461946Z
+collection: null
+requestName: null

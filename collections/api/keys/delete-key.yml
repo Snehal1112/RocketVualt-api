@@ -2,10 +2,15 @@ uid: 3e7cb238-3625-494a-81fb-09d751d5e798
 info:
   name: Delete Key
   type: http
-  seq: 5
 http:
   method: DELETE
-  url: '{{base_url}}/api/v1/keys/{{key_id}}'
+  url: '{{base_url}}/api/v1/keys/{{key_id}}?='
   auth:
     type: bearer
     token: '{{token}}'
+settings:
+  encodeUrl: true
+  timeout: 0.0
+  followRedirects: true
+  maxRedirects: 5.0
+  verifySsl: true

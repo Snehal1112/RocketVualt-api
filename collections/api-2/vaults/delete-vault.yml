@@ -1,0 +1,11 @@
+uid: d6206a36-d51d-4527-8624-a0893c4bfaf2
+info:
+  name: Delete Vault
+  type: http
+  seq: 5
+http:
+  method: DELETE
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}'
+  auth:
+    type: bearer
+    token: '{{token}}'

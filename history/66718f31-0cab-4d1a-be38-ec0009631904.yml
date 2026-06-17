@@ -1,0 +1,9 @@
+id: 66718f31-0cab-4d1a-be38-ec0009631904
+method: POST
+url: http://localhost:8774/api/v1/users/login
+status: 200
+durationMs: 201
+responseSize: 968
+timestamp: 2026-05-28T20:02:26.931483193Z
+collection: null
+requestName: null

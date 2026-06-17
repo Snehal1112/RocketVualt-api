@@ -1,0 +1,11 @@
+uid: de760fb0-f430-4763-a9f9-6132f865012a
+info:
+  name: List Vaults
+  type: http
+  seq: 2
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/vaults'
+  auth:
+    type: bearer
+    token: '{{token}}'

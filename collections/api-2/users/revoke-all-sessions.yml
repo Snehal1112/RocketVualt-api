@@ -1,0 +1,11 @@
+uid: a558197c-6e05-43fb-8b14-ca3a12d6d5ee
+info:
+  name: Revoke All Sessions
+  type: http
+  seq: 8
+http:
+  method: DELETE
+  url: '{{base_url}}/api/v1/users/sessions'
+  auth:
+    type: bearer
+    token: '{{token}}'
