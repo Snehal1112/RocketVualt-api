@@ -1,0 +1,11 @@
+uid: 842ab01f-7c5c-4535-a660-afb742184f37
+info:
+  name: List Keys
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/keys?page=0&per_page=20'
+  auth:
+    type: bearer
+    token: '{{token}}'

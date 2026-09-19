@@ -1,0 +1,26 @@
+uid: e96ebc2e-aaef-4fac-9c7b-730ef12ff3a2
+info:
+  name: Refresh Token
+  type: http
+  seq: 2
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/users/refresh'
+  body:
+    type: json
+    data: |-
+      {
+        "refresh_token": "{{refresh_token}}"
+      }
+runtime:
+  variables:
+  - name: refresh_token
+    initial: 870bf269e701af1ad68ca3495847ee26851c9f561ebc3441aefc6ba84510212e
+  scripts:
+  - type: after-response
+    code: |-
+      const res = bru.response.getBody();
+      if (res && res.token) {
+        bru.setEnvVar("token", res.token);
+        console.log("Token refreshed successfully");
+      }

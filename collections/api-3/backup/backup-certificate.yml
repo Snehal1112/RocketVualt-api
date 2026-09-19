@@ -1,0 +1,11 @@
+uid: 37a8220c-f029-4a49-b796-e51025ff8ca0
+info:
+  name: Backup Certificate
+  type: http
+  seq: 5
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/certificates/{{certificate_id}}/backup'
+  auth:
+    type: bearer
+    token: '{{token}}'

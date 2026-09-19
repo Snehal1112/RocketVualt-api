@@ -1,0 +1,11 @@
+uid: f7349683-e6ad-443f-a00e-8ddde5b27dda
+info:
+  name: Delete Certificate
+  type: http
+  seq: 5
+http:
+  method: DELETE
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/certificates/{{certificate_id}}'
+  auth:
+    type: bearer
+    token: '{{token}}'

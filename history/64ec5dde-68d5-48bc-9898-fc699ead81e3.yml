@@ -1,0 +1,9 @@
+id: 64ec5dde-68d5-48bc-9898-fc699ead81e3
+method: GET
+url: http://localhost:8080/fhir/r4/MedicationRequest?patient=05247e64-5361-48b1-ab3d-e89fb427a431
+status: 200
+durationMs: 11
+responseSize: 1453
+timestamp: 2026-07-12T15:43:33.423975843Z
+collection: null
+requestName: null

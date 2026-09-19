@@ -1,0 +1,22 @@
+name: production
+variables:
+- name: base_url
+  value: https://rocketvault.example.com
+- name: token
+  value: ''
+- name: username
+  value: admin
+- name: password
+  value: ''
+- name: totp_code
+  value: ''
+- name: vault_name
+  value: default
+- name: ca_cert_id
+  value: ''
+- name: token,
+  value: ''
+- name: password,
+  value: ''
+- name: totp_code
+  value: ''

@@ -1,0 +1,17 @@
+uid: 66e76762-642e-4b7b-a93a-285acd40f15a
+info:
+  name: Update Access Policy
+  type: http
+  seq: 4
+http:
+  method: PUT
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/access-policies/{{policy_id}}'
+  body:
+    type: json
+    data: |-
+      {
+        "effect": "deny"
+      }
+  auth:
+    type: bearer
+    token: '{{token}}'

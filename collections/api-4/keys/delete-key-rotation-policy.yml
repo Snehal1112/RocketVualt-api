@@ -1,0 +1,11 @@
+uid: 80dae95b-3ebd-4ee2-929d-ae58d4da7515
+info:
+  name: Delete Key Rotation Policy
+  type: http
+  seq: 16
+http:
+  method: DELETE
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/keys/{{key_id}}/rotationpolicy'
+  auth:
+    type: bearer
+    token: '{{token}}'

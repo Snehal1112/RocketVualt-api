@@ -1,0 +1,9 @@
+id: e753238c-879c-4cde-a33a-49f51ae8ab8b
+method: GET
+url: http://localhost:8080/fhir/r4/MedicationRequest/e0554e70-8ec7-49a2-802b-bdefab945ea7
+status: 200
+durationMs: 10
+responseSize: 451
+timestamp: 2026-07-12T13:20:29.804664868Z
+collection: null
+requestName: null

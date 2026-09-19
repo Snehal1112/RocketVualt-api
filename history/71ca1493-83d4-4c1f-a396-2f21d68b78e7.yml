@@ -1,0 +1,9 @@
+id: 71ca1493-83d4-4c1f-a396-2f21d68b78e7
+method: POST
+url: https://api.rocketvault.numericlabs.io/api/v1/vaults/default/secrets
+status: 403
+durationMs: 815
+responseSize: 66
+timestamp: 2026-09-17T04:32:47.275250103Z
+collection: api-4
+requestName: Create Secret

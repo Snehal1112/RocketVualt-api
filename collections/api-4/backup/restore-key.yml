@@ -1,0 +1,17 @@
+uid: b0d0bc3f-3983-42ab-b321-36882ffff47a
+info:
+  name: Restore Key
+  type: http
+  seq: 4
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/keys/restore'
+  body:
+    type: json
+    data: |-
+      {
+        "blob": "base64-encoded-backup-blob"
+      }
+  auth:
+    type: bearer
+    token: '{{token}}'

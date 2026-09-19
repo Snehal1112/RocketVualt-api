@@ -1,0 +1,18 @@
+uid: 3f2ef547-1d32-403a-9ddf-84b1bb965197
+info:
+  name: Sign Key
+  type: http
+  seq: 10
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/keys/{{key_id}}/sign'
+  body:
+    type: json
+    data: |-
+      {
+        "value": "<base64-encoded-data-to-sign>",
+        "algorithm": "RS256"
+      }
+  auth:
+    type: bearer
+    token: '{{token}}'

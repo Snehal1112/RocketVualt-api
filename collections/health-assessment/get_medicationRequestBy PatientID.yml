@@ -1,0 +1,16 @@
+uid: caed1084-e6f4-493c-899c-6ad5d6d6b105
+info:
+  name: get_medicationRequestBy PatientID
+  type: http
+http:
+  method: GET
+  url: http://localhost:8080/fhir/r4/MedicationRequest?patient=05247e64-5361-48b1-ab3d-e89fb427a431
+  headers:
+  - name: X-Actor-HPI
+    value: 99ZZZA
+settings:
+  encodeUrl: true
+  timeout: 0.0
+  followRedirects: true
+  maxRedirects: 5.0
+  verifySsl: true

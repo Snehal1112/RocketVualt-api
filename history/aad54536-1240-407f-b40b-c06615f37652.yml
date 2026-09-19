@@ -1,0 +1,9 @@
+id: aad54536-1240-407f-b40b-c06615f37652
+method: GET
+url: http://localhost:8080/fhir/r4/Patient
+status: 200
+durationMs: 9
+responseSize: 833
+timestamp: 2026-07-12T05:24:11.140825534Z
+collection: null
+requestName: null

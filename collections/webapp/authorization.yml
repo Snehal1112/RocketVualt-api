@@ -1,0 +1,13 @@
+uid: 2b6c1212-70f1-408c-9c95-f3d437345b0a
+info:
+  name: authorization
+  type: http
+http:
+  method: GET
+  url: https://exchange4all.local:8443/signin/v1/identifier/_/authorize?client_id=webapp&response_type=code&scope=openid+profile+email+E4A.App&redirect_uri=https%3A%2F%2Fexchange4all.local%2Fwebapp%2F&state=6lqHbpGm524WTmUV&nonce=taivzGR3cixv4EaQ&code_challenge=hc_gqwtu9W_m-ol29UX9BdxNKV1y-cajNV-1ucS0P7o&code_challenge_method=S256
+settings:
+  encodeUrl: true
+  timeout: 0.0
+  followRedirects: true
+  maxRedirects: 5.0
+  verifySsl: true

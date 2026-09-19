@@ -1,0 +1,11 @@
+uid: e41f80bc-1187-4309-b5f0-83a15a4cd690
+info:
+  name: List Key Versions
+  type: http
+  seq: 9
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/keys/{{key_id}}/versions'
+  auth:
+    type: bearer
+    token: '{{token}}'

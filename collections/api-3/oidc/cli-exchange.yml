@@ -1,0 +1,23 @@
+uid: af22fee3-26c3-4791-adf3-c17aa14b7ead
+info:
+  name: OIDC CLI Exchange
+  type: http
+  seq: 3
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/oidc/cli/exchange'
+  body:
+    type: json
+    data: |-
+      {
+        "code": "{{oidc_cli_code}}"
+      }
+runtime:
+  scripts:
+  - type: after-response
+    code: |-
+      const res = bru.response.getBody();
+      if (res && res.token) {
+        bru.setEnvVar("token", res.token);
+        console.log("Token captured successfully");
+      }

@@ -1,0 +1,31 @@
+uid: 13c5cb7d-8b23-479d-81d3-3f24ffcb97c6
+info:
+  name: Login
+  type: http
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/users/login'
+  body:
+    type: json
+    data: |-
+      {
+        "username": "{{username}}",
+        "password": "{{password}}",
+        "totp_code": "{{totp_code}}"
+      }
+runtime:
+  scripts:
+  - type: after-response
+    code: |-
+      const res = rc.response.getBody();
+      console.log(res);
+      if (res && res.token) {
+        bru.setEnvVar("token", res.token);
+        console.log("Token captured successfully");
+      }
+settings:
+  encodeUrl: true
+  timeout: 0.0
+  followRedirects: true
+  maxRedirects: 5.0
+  verifySsl: true

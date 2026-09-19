@@ -1,0 +1,8 @@
+uid: d8dca423-7be7-4e96-9052-186892e144d9
+info:
+  name: OIDC Callback
+  type: http
+  seq: 2
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/oidc/callback'

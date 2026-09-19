@@ -2,7 +2,6 @@ uid: 33acb011-33fd-45b2-bff4-f5a2361db6cf
 info:
   name: Create Key
   type: http
-  seq: 3
 http:
   method: POST
   url: '{{base_url}}/api/v1/vaults/{{vault_name}}/keys'
@@ -10,11 +9,14 @@ http:
     type: json
     data: |-
       {
-        "name": "my-rsa-key",
-        "type": "RSA",
-        "bits": 2048,
+        "name": "hsm-ec-test",
+        "type": "ECDSA",
+        "curve": "P-256",
         "tags": ["env:dev"]
       }
-  auth:
-    type: bearer
-    token: '{{token}}'
+settings:
+  encodeUrl: true
+  timeout: 0.0
+  followRedirects: true
+  maxRedirects: 5.0
+  verifySsl: true

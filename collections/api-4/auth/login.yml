@@ -1,0 +1,41 @@
+uid: b05a143a-f928-4300-baf6-5b1992cf9211
+info:
+  name: Login
+  type: http
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/users/login'
+  body:
+    type: json
+    data: |-
+      {
+        "username": "{{username}}",
+        "password": "{{password}}",
+        "totp_code": "{{totp_code}}"
+      }
+runtime:
+  variables:
+  - name: username
+    initial: admin
+  - name: password
+    initial: Snehal@1977
+  - name: totp-cide
+    initial: '311775'
+  scripts:
+  - type: after-response
+    code: |-
+      // const res = bru.response.getBody();
+      console.log(rok);
+      // if (res && res.token) {
+      //   bru.setEnvVar("token", res.token);
+      //   console.log("Token captured successfully");
+      // }
+
+
+      console.log("sddd")
+settings:
+  encodeUrl: true
+  timeout: 0.0
+  followRedirects: true
+  maxRedirects: 5.0
+  verifySsl: true

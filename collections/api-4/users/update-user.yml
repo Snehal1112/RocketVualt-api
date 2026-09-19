@@ -1,0 +1,17 @@
+uid: ff29e68b-653a-49b5-8e54-9fc2f8369627
+info:
+  name: Update User
+  type: http
+  seq: 4
+http:
+  method: PUT
+  url: '{{base_url}}/api/v1/users/{{user_id}}'
+  body:
+    type: json
+    data: |-
+      {
+        "username": "updateduser"
+      }
+  auth:
+    type: bearer
+    token: '{{token}}'

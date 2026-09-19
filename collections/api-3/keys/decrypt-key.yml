@@ -1,0 +1,19 @@
+uid: 7f67b079-7140-4e61-88e7-254d04ef90a4
+info:
+  name: Decrypt Key
+  type: http
+  seq: 13
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/keys/{{key_id}}/decrypt'
+  body:
+    type: json
+    data: |-
+      {
+        "value": "<base64-encoded-ciphertext>",
+        "nonce": "<base64-encoded-nonce-for-AES256-GCM>",
+        "algorithm": "RSA-OAEP"
+      }
+  auth:
+    type: bearer
+    token: '{{token}}'

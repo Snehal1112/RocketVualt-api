@@ -1,0 +1,25 @@
+uid: 4d781de9-e38c-48e6-a65f-93b1c317efb5
+info:
+  name: List Users
+  type: http
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/users?page=0&per_page=20'
+  body:
+    type: json
+    data: ''
+  auth:
+    type: bearer
+    token: '{{token}}'
+runtime:
+  scripts:
+  - type: before-request
+    code: ''
+  - type: after-response
+    code: ''
+settings:
+  encodeUrl: true
+  timeout: 0.0
+  followRedirects: true
+  maxRedirects: 5.0
+  verifySsl: true

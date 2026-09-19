@@ -1,0 +1,8 @@
+uid: 4f20a06b-b9a2-4749-8433-88b1fbdf5093
+info:
+  name: OIDC Login
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/oidc/login'

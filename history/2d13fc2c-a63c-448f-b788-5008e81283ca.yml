@@ -1,0 +1,9 @@
+id: 2d13fc2c-a63c-448f-b788-5008e81283ca
+method: GET
+url: http://localhost:8080/api/v1/patients/973df530-e3f3-400f-b8ed-516f68511fb9/medications
+status: 200
+durationMs: 10
+responseSize: 3
+timestamp: 2026-07-12T15:56:18.772153260Z
+collection: null
+requestName: null

@@ -1,0 +1,11 @@
+uid: 08ca93b0-6d5f-4d3a-9c86-aa934356d9ae
+info:
+  name: Delete Certificate Policy
+  type: http
+  seq: 8
+http:
+  method: DELETE
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/certificates/{{certificate_id}}/policy'
+  auth:
+    type: bearer
+    token: '{{token}}'

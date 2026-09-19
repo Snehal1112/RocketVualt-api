@@ -1,0 +1,21 @@
+uid: 4b8eb17a-0b6f-4d75-aa39-2348e199e79f
+info:
+  name: Create Access Policy
+  type: http
+  seq: 3
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/access-policies'
+  body:
+    type: json
+    data: |-
+      {
+        "principal_id": "{{user_id}}",
+        "principal_type": "user",
+        "resource_type": "secrets",
+        "operation": "get",
+        "effect": "allow"
+      }
+  auth:
+    type: bearer
+    token: '{{token}}'

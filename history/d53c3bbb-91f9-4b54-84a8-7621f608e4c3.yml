@@ -1,0 +1,9 @@
+id: d53c3bbb-91f9-4b54-84a8-7621f608e4c3
+method: PATCH
+url: http://localhost:8080/fhir/r4/MedicationRequest/e0554e70-8ec7-49a2-802b-bdefab945ea7
+status: 200
+durationMs: 12
+responseSize: 125
+timestamp: 2026-07-12T13:21:17.778040368Z
+collection: null
+requestName: null

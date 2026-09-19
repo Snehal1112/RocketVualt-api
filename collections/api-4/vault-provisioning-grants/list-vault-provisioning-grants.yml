@@ -1,0 +1,11 @@
+uid: 2b246e52-08df-4c22-9da7-fff708334d42
+info:
+  name: List Vault Provisioning Grants
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/vault-provisioning-grants'
+  auth:
+    type: bearer
+    token: '{{token}}'

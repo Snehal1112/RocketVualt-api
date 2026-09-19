@@ -1,0 +1,11 @@
+uid: 86d371d3-2267-4709-8886-2759b57aa149
+info:
+  name: Get GDPR Report
+  type: http
+  seq: 3
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/audit/reports/gdpr'
+  auth:
+    type: bearer
+    token: '{{token}}'

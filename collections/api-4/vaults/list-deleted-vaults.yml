@@ -1,0 +1,11 @@
+uid: 7effae1e-8648-4fec-b5af-ffd6a695b77b
+info:
+  name: List Deleted Vaults
+  type: http
+  seq: 8
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/vaults'
+  auth:
+    type: bearer
+    token: '{{token}}'

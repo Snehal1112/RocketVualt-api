@@ -1,0 +1,20 @@
+name: local
+variables:
+- name: base_url
+  value: https://api.rocketvault.numericlabs.io
+- name: username
+  value: admin
+- name: password
+  value: admin123
+- name: totp_code
+  value: '686499'
+- name: vault_name
+  value: default
+- name: ca_cert_id
+  value: ''
+- name: token
+  value: eyJhbGciOiJFUzI1NiIsImtpZCI6ImMzOWU1YTlkYjIxMGQyOWQiLCJ0eXAiOiJKV1QifQ.eyJ1c2VyX2lkIjoiNDY0M2RiYTktY2U1Ni00MjQ5LTgyMDYtMTY5MGFmY2U4MDViIiwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbImFkbWluIl0sInN1YiI6IjQ2NDNkYmE5LWNlNTYtNDI0OS04MjA2LTE2OTBhZmNlODA1YiIsImF1ZCI6WyJQQVNTV09SRF9NQU5BR0VSIl0sImV4cCI6MTc4OTgyNzc0MSwibmJmIjoxNzg5ODI0MTQxLCJpYXQiOjE3ODk4MjQxNDEsImp0aSI6IjMxYjBlNjRjLTZjZTEtNDcxMC05ZGY1LTI0ODViNTk1OTgxYiJ9.xX4EcGg1Chyy5fi_mpqakl798hqHH3mzTCS8teuoNkb8mMxnzkBSiJzRFWKIBso0Kriu_5hmPhfImy-tcfupaw
+- name: password,
+  value: ''
+- name: refresh_token
+  value: 338edb23877abbd30fc9051592afd097d605302b10859727c8927e53f8c57192

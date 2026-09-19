@@ -1,0 +1,20 @@
+uid: 331dffe0-0ea8-4299-807d-f9959b3214ba
+info:
+  name: Upsert Key Rotation Policy
+  type: http
+  seq: 15
+http:
+  method: PUT
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/keys/{{key_id}}/rotationpolicy'
+  body:
+    type: json
+    data: |-
+      {
+        "rotate_after_days": 90,
+        "notify_before_expiry_days": 30,
+        "expiry_days": 365,
+        "enabled": true
+      }
+  auth:
+    type: bearer
+    token: '{{token}}'

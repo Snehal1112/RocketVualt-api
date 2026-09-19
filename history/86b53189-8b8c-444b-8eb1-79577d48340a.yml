@@ -1,0 +1,9 @@
+id: 86b53189-8b8c-444b-8eb1-79577d48340a
+method: GET
+url: https://exchange4all.local:8443/signin/v1/identifier/_/authorize?client_id=webapp&response_type=code&scope=openid+profile+email+E4A.App&redirect_uri=https%3A%2F%2Fexchange4all.local%2Fwebapp%2F&state=6lqHbpGm524WTmUV&nonce=taivzGR3cixv4EaQ&code_challenge=hc_gqwtu9W_m-ol29UX9BdxNKV1y-cajNV-1ucS0P7o&code_challenge_method=S256
+status: 200
+durationMs: 39
+responseSize: 2399
+timestamp: 2026-07-18T17:00:54.928930876Z
+collection: null
+requestName: null

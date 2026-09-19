@@ -1,0 +1,11 @@
+uid: a0db8293-46a1-41d0-865d-85f980326f27
+info:
+  name: Get Audit Config
+  type: http
+  seq: 4
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/audit/config'
+  auth:
+    type: bearer
+    token: '{{token}}'

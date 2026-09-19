@@ -1,0 +1,22 @@
+uid: 25373657-6da0-4b07-aa4e-8b0784ac6815
+info:
+  name: Update Vault
+  type: http
+  seq: 4
+http:
+  method: PATCH
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}'
+  body:
+    type: json
+    data: |-
+      {
+        "enabled": true,
+        "purge_protection": true,
+        "retention_days": 30,
+        "tags": {
+          "env": "prod"
+        }
+      }
+  auth:
+    type: bearer
+    token: '{{token}}'

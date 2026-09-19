@@ -1,0 +1,11 @@
+uid: bfbb12ea-602c-40c7-959d-8a93f1536a02
+info:
+  name: Get Key Rotation Policy
+  type: http
+  seq: 14
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/keys/{{key_id}}/rotationpolicy'
+  auth:
+    type: bearer
+    token: '{{token}}'

@@ -1,0 +1,8 @@
+uid: 18ac6766-0df2-4fac-ab2d-ee17ea6a1e70
+info:
+  name: Get Metrics
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{base_url}}/metrics'

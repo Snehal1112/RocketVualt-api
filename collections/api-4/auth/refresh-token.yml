@@ -1,0 +1,30 @@
+uid: fb8f5802-c4a6-45fb-8f7d-5874dd435828
+info:
+  name: Refresh Token
+  type: http
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/users/refresh'
+  body:
+    type: json
+    data: |-
+      {
+        "refresh_token": "{{refresh_token}}"
+      }
+runtime:
+  scripts:
+  - type: after-response
+    code: |2-
+
+      const response = res.getBody();
+
+      console.log(response.token, "token");
+      rok.setEnvVar("token", response.token);
+
+      console.log(rok.getEnvName());
+settings:
+  encodeUrl: true
+  timeout: 0.0
+  followRedirects: true
+  maxRedirects: 5.0
+  verifySsl: true

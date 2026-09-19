@@ -1,0 +1,19 @@
+uid: 370304a1-5312-46b4-897c-6c3a71faf5d3
+info:
+  name: Upsert Vault Webhook
+  type: http
+  seq: 9
+http:
+  method: PUT
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/webhook'
+  body:
+    type: json
+    data: |-
+      {
+        "url": "https://example.com/webhooks/rocketvault",
+        "rotate_secret": false,
+        "enabled": true
+      }
+  auth:
+    type: bearer
+    token: '{{token}}'

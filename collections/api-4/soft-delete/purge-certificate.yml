@@ -1,0 +1,11 @@
+uid: d03c66b1-cfb0-4b82-93dd-52e7da555bc6
+info:
+  name: Purge Certificate (Permanent Delete)
+  type: http
+  seq: 9
+http:
+  method: DELETE
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/deleted/certificates/{{certificate_id}}/purge'
+  auth:
+    type: bearer
+    token: '{{token}}'

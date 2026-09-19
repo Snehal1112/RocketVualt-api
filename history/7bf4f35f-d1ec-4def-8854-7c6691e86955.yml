@@ -1,0 +1,9 @@
+id: 7bf4f35f-d1ec-4def-8854-7c6691e86955
+method: GET
+url: https://api.rocketvault.numericlabs.io/api/v1/users?page=0&per_page=20
+status: 401
+durationMs: 282
+responseSize: 35
+timestamp: 2026-09-16T13:16:43.152107194Z
+collection: null
+requestName: null

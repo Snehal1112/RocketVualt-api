@@ -1,0 +1,11 @@
+uid: d2903d7e-0e42-482b-9bc2-1aa4cf2653ff
+info:
+  name: Delete Vault Webhook
+  type: http
+  seq: 10
+http:
+  method: DELETE
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/webhook'
+  auth:
+    type: bearer
+    token: '{{token}}'

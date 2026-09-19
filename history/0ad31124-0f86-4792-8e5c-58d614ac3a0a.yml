@@ -1,0 +1,9 @@
+id: 0ad31124-0f86-4792-8e5c-58d614ac3a0a
+method: POST
+url: https://rocketvault-production.up.railway.app/api/v1/users
+status: 401
+durationMs: 668
+responseSize: 28
+timestamp: 2026-08-23T06:51:21.179831603Z
+collection: null
+requestName: null

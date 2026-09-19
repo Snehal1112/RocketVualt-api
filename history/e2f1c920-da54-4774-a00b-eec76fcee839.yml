@@ -1,0 +1,9 @@
+id: e2f1c920-da54-4774-a00b-eec76fcee839
+method: POST
+url: http://localhost:8080/api/v1/medications/9056fdf8-3760-4eed-981d-4906c6c15774/discontinue
+status: 200
+durationMs: 10
+responseSize: 121
+timestamp: 2026-07-12T15:57:04.955522887Z
+collection: null
+requestName: null

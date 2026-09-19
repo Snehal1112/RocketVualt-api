@@ -1,0 +1,11 @@
+uid: 364b9c46-b8cb-40aa-87a7-937088de9b57
+info:
+  name: Query Audit Logs
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/audit/logs'
+  auth:
+    type: bearer
+    token: '{{token}}'

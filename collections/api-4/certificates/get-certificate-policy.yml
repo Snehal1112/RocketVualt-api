@@ -1,0 +1,11 @@
+uid: 7db67d64-679a-42da-bb88-707fe8514c1a
+info:
+  name: Get Certificate Policy
+  type: http
+  seq: 6
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/certificates/{{certificate_id}}/policy'
+  auth:
+    type: bearer
+    token: '{{token}}'

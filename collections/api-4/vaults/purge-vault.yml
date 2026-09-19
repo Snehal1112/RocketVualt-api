@@ -1,0 +1,11 @@
+uid: 74c74616-f137-435b-a51e-38a2892dd9aa
+info:
+  name: Purge Vault (Permanent Delete)
+  type: http
+  seq: 7
+http:
+  method: DELETE
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/purge'
+  auth:
+    type: bearer
+    token: '{{token}}'

@@ -1,0 +1,27 @@
+uid: 5b3c4d6e-7f8a-49b0-8c1d-3e4f5a6b7c8d
+info:
+  name: v1-CreateMedication
+  type: http
+http:
+  method: POST
+  url: http://localhost:8080/api/v1/patients/cdb99b27-3835-4016-834e-398bf2defa26/medications
+  headers:
+  - name: X-Actor-HPI
+    value: 99ZZZA
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "medicationName": "Amoxicillin",
+        "dosage": "500mg",
+        "frequency": "3 times daily",
+        "route": "Oral"
+      }
+settings:
+  encodeUrl: true
+  timeout: 0.0
+  followRedirects: true
+  maxRedirects: 5.0
+  verifySsl: true

@@ -1,0 +1,11 @@
+uid: 2fede23e-74f9-472a-84c9-ef73f1c015e0
+info:
+  name: Delete Key
+  type: http
+  seq: 5
+http:
+  method: DELETE
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/keys/{{key_id}}'
+  auth:
+    type: bearer
+    token: '{{token}}'

@@ -1,0 +1,9 @@
+id: 3a982cdf-427b-45a6-ad4c-20ce8022197f
+method: GET
+url: http://localhost:8080/api/v1/patie/05247e64-5361-48b1-ab3d-e89fb427a431/medications
+status: 404
+durationMs: 0
+responseSize: 19
+timestamp: 2026-07-12T15:52:35.603754798Z
+collection: null
+requestName: null

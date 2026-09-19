@@ -1,0 +1,11 @@
+uid: f8ebb9d2-ac53-44df-8687-356f3c57f529
+info:
+  name: List Deleted Keys
+  type: http
+  seq: 4
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/deleted/keys'
+  auth:
+    type: bearer
+    token: '{{token}}'

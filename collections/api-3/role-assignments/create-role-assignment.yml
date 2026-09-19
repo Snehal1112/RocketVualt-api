@@ -1,0 +1,19 @@
+uid: f570796c-95d9-4e7e-8eba-da598ee34341
+info:
+  name: Create Role Assignment
+  type: http
+  seq: 2
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/role-assignments'
+  body:
+    type: json
+    data: |-
+      {
+        "principal": "{{user_id}}",
+        "principal_type": "user",
+        "role": "Key Vault Secrets User"
+      }
+  auth:
+    type: bearer
+    token: '{{token}}'

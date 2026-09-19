@@ -1,0 +1,11 @@
+uid: 9304a764-2460-4d88-b0f6-ab998f646d38
+info:
+  name: Delete Access Policy
+  type: http
+  seq: 5
+http:
+  method: DELETE
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/access-policies/{{policy_id}}'
+  auth:
+    type: bearer
+    token: '{{token}}'

@@ -1,0 +1,8 @@
+uid: a03ea361-8597-4c49-bf03-19cff742cdc1
+info:
+  name: Readiness Check
+  type: http
+  seq: 2
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/health/ready'

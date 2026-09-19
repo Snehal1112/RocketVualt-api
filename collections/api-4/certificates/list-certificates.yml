@@ -1,0 +1,11 @@
+uid: b71604ed-98d0-4463-b34c-36a685abab5e
+info:
+  name: List Certificates
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/certificates?page=0&per_page=20'
+  auth:
+    type: bearer
+    token: '{{token}}'

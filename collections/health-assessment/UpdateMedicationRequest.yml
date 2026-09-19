@@ -1,0 +1,25 @@
+uid: 9cda36b7-c217-430c-ab0f-5cdd5d25f4fd
+info:
+  name: UpdateMedicationRequest
+  type: http
+http:
+  method: PATCH
+  url: http://localhost:8080/fhir/r4/MedicationRequest/e0554e70-8ec7-49a2-802b-bdefab945ea7
+  headers:
+  - name: X-Actor-HPI
+    value: 99ZZZA
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "dosage": "200mg",
+        "route":"non-oral"
+      }
+settings:
+  encodeUrl: true
+  timeout: 0.0
+  followRedirects: true
+  maxRedirects: 5.0
+  verifySsl: true

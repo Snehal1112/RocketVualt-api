@@ -2,10 +2,15 @@ uid: 2df55694-e56f-4bbb-b1ea-46ef78a26da7
 info:
   name: List Users
   type: http
-  seq: 1
 http:
   method: GET
   url: '{{base_url}}/api/v1/users?page=0&per_page=20'
   auth:
     type: bearer
-    token: '{{token}}'
+    token: eyJhbGciOiJSUzI1NiIsImtpZCI6IjlkMWM3NTVmMDRkZGJjZmMiLCJ0eXAiOiJKV1QifQ.eyJ1c2VyX2lkIjoiMzA4YTQyNDAtYjJjOC00NzA0LTkyYTctNjQwZTVjMzFkNjcwIiwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsImlzcyI6Imh0dHBzOi8vbnVtZXJpY2xhYnMubHhkIiwic3ViIjoiMzA4YTQyNDAtYjJjOC00NzA0LTkyYTctNjQwZTVjMzFkNjcwIiwiYXVkIjpbIlBBU1NXT1JEX01BTkFHRVIiXSwiZXhwIjoxNzg2Nzc1MzA3LCJuYmYiOjE3ODY3NzE3MDcsImlhdCI6MTc4Njc3MTcwNywianRpIjoiZmZmOGQyNGMtMzg3YS00YTEzLTk3ODEtMjExMjdhMTU5NTljIn0.RksZgHT4VuCWfxcHbxXWrduBT-_6PKIHJk2X3NF1nnBMv8cHlUj7Qd8cS5X7sa8-GmIAv-qdFvXRVkjLP4CKFJg0ebgb-O68p04Dl6asMrViko6eMZ06zbO_sZWcqWLyvDcq-J9YxyLgs0pQFIytpouu48lcTJLFefz35cu5dHqT7Jp3286UXaw0e4Ai4T2QSytLjIXbfdKfYYyyiNvq_8glfzJuTq-ML9v3zO7Dx5tSTgXjRCOFfEHIK-AwevLfChX1mL6NG_ulJ-C3rzYJfZfA2rOFBvpQD_COYTmyikSq8DgwlJwRUgLR90kzd8TrvLGZvaXpGswYCxEoPJZJLA
+settings:
+  encodeUrl: true
+  timeout: 0.0
+  followRedirects: true
+  maxRedirects: 5.0
+  verifySsl: true

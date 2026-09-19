@@ -1,0 +1,11 @@
+uid: 398faad7-e306-4c73-9308-ffcc32e8dee3
+info:
+  name: Backup Key
+  type: http
+  seq: 3
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/keys/{{key_id}}/backup'
+  auth:
+    type: bearer
+    token: '{{token}}'

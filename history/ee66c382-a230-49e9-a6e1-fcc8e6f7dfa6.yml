@@ -1,0 +1,9 @@
+id: ee66c382-a230-49e9-a6e1-fcc8e6f7dfa6
+method: GET
+url: https://api.rocketvault.numericlabs.io/api/v1/health
+status: 200
+durationMs: 409
+responseSize: 983
+timestamp: 2026-09-16T17:20:07.505227579Z
+collection: api-4
+requestName: Health Check

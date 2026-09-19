@@ -1,0 +1,11 @@
+uid: ca7cbe2e-241f-429e-8b23-96775369c66c
+info:
+  name: Get Certificate
+  type: http
+  seq: 2
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/certificates/{{certificate_id}}'
+  auth:
+    type: bearer
+    token: '{{token}}'

@@ -1,0 +1,17 @@
+uid: 4401655a-78d3-437e-9f64-fe113581f8dc
+info:
+  name: Restore Certificate
+  type: http
+  seq: 6
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/certificates/restore'
+  body:
+    type: json
+    data: |-
+      {
+        "blob": "base64-encoded-backup-blob"
+      }
+  auth:
+    type: bearer
+    token: '{{token}}'

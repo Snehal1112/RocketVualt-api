@@ -1,0 +1,11 @@
+uid: 9b2cc62f-fddc-445d-b577-0c57ba520dd1
+info:
+  name: Get Vault Webhook
+  type: http
+  seq: 6
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/webhook'
+  auth:
+    type: bearer
+    token: '{{token}}'

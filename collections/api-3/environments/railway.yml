@@ -1,0 +1,15 @@
+name: railway
+variables:
+- name: base_url
+  value: https://rocketvault-production.up.railway.app
+- name: username
+  value: admin
+- name: password
+  value: Snehal@1977
+- name: totp_code
+  value: '844307'
+- name: token
+  value: eyJhbGciOiJFUzI1NiIsImtpZCI6ImMzOWU1YTlkYjIxMGQyOWQiLCJ0eXAiOiJKV1QifQ.eyJ1c2VyX2lkIjoiNDY0M2RiYTktY2U1Ni00MjQ5LTgyMDYtMTY5MGFmY2U4MDViIiwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJhZG1pbiIsInN1YiI6IjQ2NDNkYmE5LWNlNTYtNDI0OS04MjA2LTE2OTBhZmNlODA1YiIsImF1ZCI6WyJQQVNTV09SRF9NQU5BR0VSIl0sImV4cCI6MTc4NzQ1OTQ0NywibmJmIjoxNzg3NDU1ODQ3LCJpYXQiOjE3ODc0NTU4NDcsImp0aSI6IjA1ZTQ4NjZkLTFjNTUtNGY2MS1hMGY5LWRlMzU2OTAyMjQzNCJ9.2nA9PTHlB342qm2ynxT1MSWM372uDBS27OgQf1VcW725Fd-okzlug7cZWw_XKvHqrxaYx6ER1lUd7wvcx9XSQQ
+- name: refresh_token
+  value: ''
+  disabled: true

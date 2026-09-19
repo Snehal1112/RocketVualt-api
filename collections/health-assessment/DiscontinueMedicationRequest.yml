@@ -1,0 +1,24 @@
+uid: 4a2b3c5d-6e7f-48a9-9b0c-2d3e4f5a6b7c
+info:
+  name: DiscontinueMedicationRequest
+  type: http
+http:
+  method: POST
+  url: http://localhost:8080/fhir/r4/MedicationRequest/e0554e70-8ec7-49a2-802b-bdefab945ea7/discontinue
+  headers:
+  - name: X-Actor-HPI
+    value: 99ZZZA
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "reason": "Course completed"
+      }
+settings:
+  encodeUrl: true
+  timeout: 0.0
+  followRedirects: true
+  maxRedirects: 5.0
+  verifySsl: true

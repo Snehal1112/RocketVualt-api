@@ -1,0 +1,19 @@
+uid: 64b99371-615d-4c7e-aef7-4d2d73af88d1
+info:
+  name: Verify Key
+  type: http
+  seq: 11
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/keys/{{key_id}}/verify'
+  body:
+    type: json
+    data: |-
+      {
+        "value": "<base64-encoded-original-data>",
+        "signature": "<base64-encoded-signature>",
+        "algorithm": "RS256"
+      }
+  auth:
+    type: bearer
+    token: '{{token}}'

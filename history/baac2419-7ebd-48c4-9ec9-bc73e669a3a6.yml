@@ -1,0 +1,9 @@
+id: baac2419-7ebd-48c4-9ec9-bc73e669a3a6
+method: GET
+url: http://localhost:8774/metrics
+status: 200
+durationMs: 14
+responseSize: 9674
+timestamp: 2026-08-15T09:16:12.377175336Z
+collection: null
+requestName: null

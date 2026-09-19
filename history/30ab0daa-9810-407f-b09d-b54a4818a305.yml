@@ -1,0 +1,9 @@
+id: 30ab0daa-9810-407f-b09d-b54a4818a305
+method: POST
+url: http://localhost:8080/fhir/r4/MedicationRequest
+status: 201
+durationMs: 10
+responseSize: 451
+timestamp: 2026-07-12T13:16:31.962442815Z
+collection: null
+requestName: null

@@ -1,0 +1,11 @@
+uid: b457dd3f-502f-48e4-9b66-bdf3be289f50
+info:
+  name: List Role Assignments
+  type: http
+  seq: 1
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/role-assignments'
+  auth:
+    type: bearer
+    token: '{{token}}'

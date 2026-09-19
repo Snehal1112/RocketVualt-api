@@ -1,0 +1,9 @@
+id: c0569e70-bfbe-4b80-a697-6181808a5aac
+method: GET
+url: http://localhost:8774/api/v1/vaults/default/access-policies
+status: 404
+durationMs: 2
+responseSize: 63
+timestamp: 2026-08-15T04:55:44.183452934Z
+collection: null
+requestName: null

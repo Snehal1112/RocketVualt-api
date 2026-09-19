@@ -1,0 +1,9 @@
+id: 515f8144-69ca-4558-8de6-5f7483d6108e
+method: POST
+url: http://localhost:8080/api/v1/patients/05247e64-5361-48b1-ab3d-e89fb427a431/medications
+status: 201
+durationMs: 10
+responseSize: 304
+timestamp: 2026-07-12T15:48:42.180805961Z
+collection: null
+requestName: null

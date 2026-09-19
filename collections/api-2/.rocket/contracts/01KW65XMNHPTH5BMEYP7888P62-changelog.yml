@@ -1,0 +1,21 @@
+contractId: 01KW65XMNHPTH5BMEYP7888P62
+entries:
+- timestamp: 2026-08-15T06:09:54.004192842Z
+  requestPath: users/list-users.yml
+  field: auth_type
+  changeType: changed
+  oldValue: none
+  newValue: bearer
+  isBreaking: true
+  requestMethod: GET
+  httpPath: '{{base_url}}/api/v1/users?page=0&per_page=20'
+  author: numericlabs
+- timestamp: 2026-08-15T06:09:54.004192842Z
+  requestPath: users/list-users.yml
+  field: auth_detail
+  changeType: changed
+  newValue: eyJhbGci…
+  isBreaking: true
+  requestMethod: GET
+  httpPath: '{{base_url}}/api/v1/users?page=0&per_page=20'
+  author: numericlabs

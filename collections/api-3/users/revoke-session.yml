@@ -1,0 +1,11 @@
+uid: 237b5e54-e211-4ad8-9a89-8a4f372d5553
+info:
+  name: Revoke Session
+  type: http
+  seq: 7
+http:
+  method: DELETE
+  url: '{{base_url}}/api/v1/users/sessions/{{session_id}}'
+  auth:
+    type: bearer
+    token: '{{token}}'

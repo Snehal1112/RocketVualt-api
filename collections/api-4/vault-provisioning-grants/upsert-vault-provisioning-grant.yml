@@ -1,0 +1,17 @@
+uid: d936ed2f-4a59-48fb-b096-3f0575cbb442
+info:
+  name: Upsert Vault Provisioning Grant
+  type: http
+  seq: 2
+http:
+  method: PUT
+  url: '{{base_url}}/api/v1/vault-provisioning-grants/{{principal_id}}'
+  body:
+    type: json
+    data: |-
+      {
+        "quota": 5
+      }
+  auth:
+    type: bearer
+    token: '{{token}}'

@@ -1,0 +1,9 @@
+id: 88072df0-0e4c-4a3a-bb2e-d0dafa607dd6
+method: GET
+url: http://localhost:8080/fhir/r4/Patient
+status: 200
+durationMs: 5
+responseSize: 833
+timestamp: 2026-07-11T13:06:37.331985734Z
+collection: null
+requestName: null

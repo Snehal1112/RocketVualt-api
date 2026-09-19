@@ -1,0 +1,11 @@
+uid: bef7bd62-7a34-4d08-afc1-33773e067ffa
+info:
+  name: Delete Role Assignment
+  type: http
+  seq: 4
+http:
+  method: DELETE
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/role-assignments/{{assignment_id}}'
+  auth:
+    type: bearer
+    token: '{{token}}'

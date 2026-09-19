@@ -1,0 +1,37 @@
+uid: 8e4af22b-4a0c-4882-b957-5e37811af5fb
+info:
+  name: MedicationRequest
+  type: http
+http:
+  method: POST
+  url: http://localhost:8080/fhir/r4/MedicationRequest
+  headers:
+  - name: X-Actor-HPI
+    value: 99ZZZA
+  - name: Content-Type
+    value: application/json
+  body:
+    type: json
+    data: |-
+      {
+        "resourceType": "MedicationRequest",
+        "subject": {
+          "reference": "Patient/05247e64-5361-48b1-ab3d-e89fb427a431"
+        },
+        "medicationCodeableConcept": {
+          "text": "Amoxicillinsa"
+        },
+        "dosageInstruction": [
+          {
+            "text": "500mg",
+            "frequency": "3 times daily",
+            "route": "Oral"
+          }
+        ]
+      }
+settings:
+  encodeUrl: true
+  timeout: 0.0
+  followRedirects: true
+  maxRedirects: 5.0
+  verifySsl: true

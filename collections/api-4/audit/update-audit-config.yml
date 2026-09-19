@@ -1,0 +1,17 @@
+uid: 2652394c-192a-4f00-ab74-5fd998b5ab92
+info:
+  name: Update Audit Config
+  type: http
+  seq: 5
+http:
+  method: PATCH
+  url: '{{base_url}}/api/v1/audit/config'
+  body:
+    type: json
+    data: |-
+      {
+        "retention_days": 365
+      }
+  auth:
+    type: bearer
+    token: '{{token}}'

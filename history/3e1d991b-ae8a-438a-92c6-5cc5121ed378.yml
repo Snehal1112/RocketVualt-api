@@ -1,0 +1,9 @@
+id: 3e1d991b-ae8a-438a-92c6-5cc5121ed378
+method: POST
+url: https://api.rocketvault.numericlabs.io/api/v1/users/refresh
+status: 200
+durationMs: 369
+responseSize: 725
+timestamp: 2026-09-16T14:18:23.871054510Z
+collection: null
+requestName: null

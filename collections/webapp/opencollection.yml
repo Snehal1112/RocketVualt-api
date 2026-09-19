@@ -1,0 +1,23 @@
+opencollection: 1.0.0
+uid: 1c8822e8-465c-4cdc-9bf0-97172009ab2b
+info:
+  name: webapp
+request:
+  auth:
+    type: oauth2
+    flow: authorization_code
+    accessTokenUrl: ''
+    authorizationUrl: https://exchange4all.local:8443/signin/v1/identifier/_/authorize?client_id=webapp&response_type=code&scope=openid+profile+email+E4A.App&redirect_uri=https%3A%2F%2Fexchange4all.local%2Fwebapp%2F&state=6lqHbpGm524WTmUV&nonce=taivzGR3cixv4EaQ&code_challenge=hc_gqwtu9W_m-ol29UX9BdxNKV1y-cajNV-1ucS0P7o&code_challenge_method=S256
+    callbackUrl: https://exchange4all.local/webapp/#oidc-callback
+    credentials:
+      clientId: ''
+      clientSecret: ''
+      placement: body
+    pkce:
+      enabled: true
+      method: S256
+    settings:
+      autoFetchToken: true
+      autoRefreshToken: false
+      verifySsl: true
+      useSystemBrowser: false

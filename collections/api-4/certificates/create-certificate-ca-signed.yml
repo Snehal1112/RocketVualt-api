@@ -1,0 +1,23 @@
+uid: 56826ce8-a24e-41d0-bec1-aa12570551ed
+info:
+  name: Create Certificate (CA-Signed)
+  type: http
+  seq: 9
+http:
+  method: POST
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/certificates'
+  body:
+    type: json
+    data: |-
+      {
+        "name": "my-ca-signed-cert",
+        "key_id": "{{key_id}}",
+        "ca_cert_id": "{{ca_cert_id}}",
+        "validity_days": 365,
+        "auto_renew": true,
+        "renewal_days": 30,
+        "tags": ["env:dev"]
+      }
+  auth:
+    type: bearer
+    token: '{{token}}'

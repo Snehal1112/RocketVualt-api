@@ -1,0 +1,9 @@
+id: d5960a8d-e44f-4fbc-af72-673ea2789a27
+method: GET
+url: https://api.rocketvault.numericlabs.io/api/v1/users/sessions
+status: 200
+durationMs: 463
+responseSize: 1572
+timestamp: 2026-09-16T21:20:09.663928325Z
+collection: api-4
+requestName: List Sessions

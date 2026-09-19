@@ -1,0 +1,19 @@
+uid: a0b4a16a-21a7-415d-bc52-3d829c481af9
+info:
+  name: Update Certificate
+  type: http
+  seq: 4
+http:
+  method: PUT
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/certificates/{{certificate_id}}'
+  body:
+    type: json
+    data: |-
+      {
+        "name": "my-cert-updated",
+        "auto_renew": false,
+        "tags": ["env:prod"]
+      }
+  auth:
+    type: bearer
+    token: '{{token}}'

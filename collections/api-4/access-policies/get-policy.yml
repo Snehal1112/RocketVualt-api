@@ -1,0 +1,11 @@
+uid: e602ea58-4d1c-4316-8914-8a09bca823e5
+info:
+  name: Get Access Policy
+  type: http
+  seq: 2
+http:
+  method: GET
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/access-policies/{{policy_id}}'
+  auth:
+    type: bearer
+    token: '{{token}}'

@@ -1,0 +1,9 @@
+id: c7e4dccf-09dd-4de8-9c7f-0f46dcc19ee6
+method: POST
+url: https://api.rocketvault.numericlabs.io/api/v1/users/refresh
+status: 200
+durationMs: 1998
+responseSize: 725
+timestamp: 2026-09-16T20:01:47.539049719Z
+collection: api-4
+requestName: Refresh Token

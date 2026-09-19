@@ -1,0 +1,24 @@
+uid: b8961dba-767b-4323-a90f-616d2afc200f
+info:
+  name: Upsert Certificate Policy
+  type: http
+  seq: 7
+http:
+  method: PUT
+  url: '{{base_url}}/api/v1/vaults/{{vault_name}}/certificates/{{certificate_id}}/policy'
+  body:
+    type: json
+    data: |-
+      {
+        "validity_months": 12,
+        "key_type": "RSA",
+        "key_size": 2048,
+        "subject": "CN=my-cert",
+        "sans": "DNS:example.com,DNS:www.example.com",
+        "auto_renew": true,
+        "days_before_expiry": 30,
+        "issuer_name": "Self"
+      }
+  auth:
+    type: bearer
+    token: '{{token}}'
