@@ -8,9 +8,12 @@ consumers:
 - id: vault
   name: Vault
   kind: team
+- id: rocket-mem
+  name: rocket-mem
+  kind: team
 project: ''
-version: 0.1.0
-status: breach
+version: 0.1.1
+status: active
 effectiveDate: 2026-06-28
 enforcementMode: informational
 scope:
@@ -19,8 +22,8 @@ scope:
 policy:
   breakingChangePolicy: strict
   noticeDays: 30
-driftCount: 2
-breachCount: 2
+driftCount: 0
+breachCount: 0
 endpointCount: 8
 createdAt: 2026-06-28T03:56:08.753169414Z
-updatedAt: 2026-09-19T12:20:15.226820617Z
+updatedAt: 2026-09-19T14:55:10.728977041Z

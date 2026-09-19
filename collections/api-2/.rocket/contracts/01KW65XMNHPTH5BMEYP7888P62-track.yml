@@ -14,7 +14,7 @@ entries:
   formFields: []
   authType: bearer
   authDetail: '{{token}…'
-  capturedAt: 2026-06-28T03:56:08.756760414Z
+  capturedAt: 2026-09-19T14:53:31.260970262Z
 - requestPath: users/delete-user.yml
   method: DELETE
   urlPattern: '{{base_url}}/api/v1/users/{{user_id}}'
@@ -23,7 +23,7 @@ entries:
   formFields: []
   authType: bearer
   authDetail: '{{token}…'
-  capturedAt: 2026-06-28T03:56:08.756762357Z
+  capturedAt: 2026-09-19T14:53:31.260980311Z
 - requestPath: users/get-user.yml
   method: GET
   urlPattern: '{{base_url}}/api/v1/users/{{user_id}}'
@@ -32,7 +32,7 @@ entries:
   formFields: []
   authType: bearer
   authDetail: '{{token}…'
-  capturedAt: 2026-06-28T03:56:08.756762968Z
+  capturedAt: 2026-09-19T14:53:31.260988036Z
 - requestPath: users/list-sessions.yml
   method: GET
   urlPattern: '{{base_url}}/api/v1/users/sessions'
@@ -41,7 +41,7 @@ entries:
   formFields: []
   authType: bearer
   authDetail: '{{token}…'
-  capturedAt: 2026-06-28T03:56:08.756763309Z
+  capturedAt: 2026-09-19T14:53:31.260991462Z
 - requestPath: users/list-users.yml
   method: GET
   urlPattern: '{{base_url}}/api/v1/users?page=0&per_page=20'
@@ -50,7 +50,7 @@ entries:
   formFields: []
   authType: bearer
   authDetail: eyJhbGci…
-  capturedAt: 2026-08-15T06:09:54.003825205Z
+  capturedAt: 2026-09-19T14:53:31.260995380Z
 - requestPath: users/revoke-all-sessions.yml
   method: DELETE
   urlPattern: '{{base_url}}/api/v1/users/sessions'
@@ -59,7 +59,7 @@ entries:
   formFields: []
   authType: bearer
   authDetail: '{{token}…'
-  capturedAt: 2026-06-28T03:56:08.756764161Z
+  capturedAt: 2026-09-19T14:53:31.261000600Z
 - requestPath: users/revoke-session.yml
   method: DELETE
   urlPattern: '{{base_url}}/api/v1/users/sessions/{{session_id}}'
@@ -68,7 +68,7 @@ entries:
   formFields: []
   authType: bearer
   authDetail: '{{token}…'
-  capturedAt: 2026-06-28T03:56:08.756764762Z
+  capturedAt: 2026-09-19T14:53:31.261005519Z
 - requestPath: users/update-user.yml
   method: PUT
   urlPattern: '{{base_url}}/api/v1/users/{{user_id}}'
@@ -81,4 +81,4 @@ entries:
   formFields: []
   authType: bearer
   authDetail: '{{token}…'
-  capturedAt: 2026-06-28T03:56:08.756765313Z
+  capturedAt: 2026-09-19T14:53:31.261010809Z
