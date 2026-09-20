@@ -1,0 +1,7 @@
+uid: 32bfc369-5694-4dff-938a-cb5eddd166f0
+info:
+  name: ghgg
+  type: http
+http:
+  method: GET
+  url: ''
