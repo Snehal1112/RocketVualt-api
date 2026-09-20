@@ -1,7 +1,0 @@
-uid: b1cecfbb-4891-4329-8325-6db06df37523
-info:
-  name: gh
-  type: http
-http:
-  method: GET
-  url: ''
