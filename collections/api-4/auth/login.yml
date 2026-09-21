@@ -25,7 +25,6 @@ runtime:
   - type: after-response
     code: |-
       // const res = bru.response.getBody();
-      console.log(rok);
       // if (res && res.token) {
       //   bru.setEnvVar("token", res.token);
       //   console.log("Token captured successfully");

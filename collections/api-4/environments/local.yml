@@ -4,10 +4,10 @@ variables:
   value: https://api.rocketvault.numericlabs.io
 - name: username
   value: admin
-- name: password
-  value: admin123
+- secret: true
+  name: password
 - name: totp_code
-  value: '310146'
+  value: '370989'
 - name: vault_name
   value: my-vault
 - name: ca_cert_id
