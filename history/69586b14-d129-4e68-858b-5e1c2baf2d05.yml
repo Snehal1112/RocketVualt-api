@@ -1,0 +1,9 @@
+id: 69586b14-d129-4e68-858b-5e1c2baf2d05
+method: GET
+url: https://api.rocketvault.numericlabs.io/api/v1/vaults/my-vault/access-policies
+status: 404
+durationMs: 246
+responseSize: 63
+timestamp: 2026-09-20T19:55:36.885366363Z
+collection: api-4
+requestName: List Access Policies

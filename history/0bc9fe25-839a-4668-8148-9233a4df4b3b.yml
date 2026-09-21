@@ -1,0 +1,9 @@
+id: 0bc9fe25-839a-4668-8148-9233a4df4b3b
+method: GET
+url: https://api.rocketvault.numericlabs.io/api/v1/vaults/default/webhook
+status: 404
+durationMs: 301
+responseSize: 137
+timestamp: 2026-09-20T19:54:28.599974752Z
+collection: api-4
+requestName: Get Vault Webhook

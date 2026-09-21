@@ -1,0 +1,9 @@
+id: 212c57e4-43b0-48b7-9e5b-f6488c6601e1
+method: GET
+url: https://api.rocketvault.numericlabs.io/api/v1/vaults
+status: 200
+durationMs: 306
+responseSize: 684
+timestamp: 2026-09-20T19:54:12.861238247Z
+collection: api-4
+requestName: List Deleted Vaults

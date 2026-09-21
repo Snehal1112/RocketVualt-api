@@ -1,0 +1,9 @@
+id: ffa26984-1da3-421b-b6b4-c0edbd73fb61
+method: GET
+url: https://api.rocketvault.numericlabs.io/api/v1/vaults/default
+status: 200
+durationMs: 294
+responseSize: 210
+timestamp: 2026-09-20T19:54:38.781263975Z
+collection: api-4
+requestName: Get Vault
