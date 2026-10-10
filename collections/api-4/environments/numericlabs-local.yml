@@ -1,0 +1,37 @@
+name: numericlabs-local
+variables:
+- name: base_url
+  value: https://numericlabs.lxd
+- name: username
+  value: admin
+- name: password
+  value: admin123
+- name: token
+  value: eyJhbGciOiJSUzI1NiIsImtpZCI6IjNjNmYyMWEwOWU5OGFiZGQiLCJ0eXAiOiJKV1QifQ.eyJ1c2VyX2lkIjoiNGQxYTE1NzEtMTJmNS00OTVmLWJjNzgtODRlMjM0MzNlMjI1IiwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbImFkbWluIl0sImlzcyI6Imh0dHBzOi8vbnVtZXJpY2xhYnMubHhkIiwic3ViIjoiNGQxYTE1NzEtMTJmNS00OTVmLWJjNzgtODRlMjM0MzNlMjI1IiwiYXVkIjpbIlBBU1NXT1JEX01BTkFHRVIiXSwiZXhwIjoxNzkwNTAzODQ1LCJuYmYiOjE3OTA1MDAyNDUsImlhdCI6MTc5MDUwMDI0NSwianRpIjoiODQxY2Y1NWYtNjUwOS00NjZkLWIwMjUtOGU2MzhhNzQ0MzRmIn0.KxJ_Uc7hceVES3OT3s7-Y1wFCg0fNqcvxzb7sJN-hRQoot38cpr8eSQURcnvNNIRE76yxYh8c7Ykm1xLgdz-QadkpOQ5c4PhcFARZPzJ18dy4sqzqj0K-t72w9hl762KBqExHEnsnqeXcqEfvvfN94czZW2AiWtspCag9lZY-OQGBSVcaMPEZNFgKW6u_JO459qYEiUhrWrKCajdh2PP87CWfn4P8X1ZxEPY_lbIo8NKOsUv97tkqJp3IF2CA8iVUuR_vgXxx57OUt_ZJExPoi8b-MDrwAkr0_GlfRqHkpml2-UuE3Y1h8eTGqYK98YDIG9yZSgaZeTOs_toFKzivA
+- name: refresh_token
+  value: 7ab7af003740c6cff80cc35452cb0b7b70ca9abffb95482a7f495c518461ac59
+- name: vault_name
+  value: numericlabs-api-vault
+- name: user_id
+  value: 5eb851e7-d4d2-44c3-8737-1557ec29b29d
+- name: assignment_id
+  value: ab9136ff-828e-45d0-84e4-78797f43aa8c
+externalSecrets:
+- alias: password
+  connectionId: e84c3fb2-ae7d-4891-a20b-3d1583ad3f21
+  vaultName: rocket-api-vault
+  secretNames:
+  - name: my-secret
+    secretId: f71b8f51-1cf0-4bc1-ad8f-a19a1d3faf0d
+  - name: rocket-admin
+    secretId: bb1feb01-7000-4836-8f23-10232bd9f2e5
+  - name: test-api-key
+    secretId: a577ff3a-c4bf-4724-8060-d10379c6dc66
+  - name: test-api-key1
+    secretId: d010db36-4946-43dd-98fe-069c2a458fa0
+- alias: local
+  connectionId: 1f7ed451-379a-459f-88f3-0c3254ed51ef
+  vaultName: numericlabs-api-vault
+  secretNames:
+  - name: numericlabs-local-admin
+    secretId: 6475a53b-5d31-446f-9a4f-e73f03935483

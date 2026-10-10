@@ -1,0 +1,9 @@
+id: d243e542-aeb9-44e6-8dae-024ab4556c4a
+method: DELETE
+url: https://api.rocketvault.numericlabs.io/api/v1/service-accounts/47e5d314-768b-4c9b-afa6-e4238019263e
+status: 200
+durationMs: 777
+responseSize: 16
+timestamp: 2026-09-22T16:46:00.286448833Z
+collection: api-4
+requestName: Delete Service Account

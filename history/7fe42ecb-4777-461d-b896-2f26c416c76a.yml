@@ -1,0 +1,9 @@
+id: 7fe42ecb-4777-461d-b896-2f26c416c76a
+method: POST
+url: https://numericlabs.lxd/api/v1/users/refresh
+status: 200
+durationMs: 28
+responseSize: 1029
+timestamp: 2026-09-27T08:10:45.476514561Z
+collection: api-4
+requestName: Refresh Token

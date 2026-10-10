@@ -15,3 +15,25 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+docs: |-
+  ## Update User
+
+  Updates a user.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `PUT` |
+  | Path | `/api/v1/users/{user_id}` |
+  | Auth | Requires a valid bearer token. Admins can act on any user; other users can act only on their own profile. |
+
+  **Parameters**
+
+  - `user_id` (path): UUID of the user.
+
+  **Request body**
+
+  ```json
+  {
+    "username": "updateduser"
+  }
+  ```

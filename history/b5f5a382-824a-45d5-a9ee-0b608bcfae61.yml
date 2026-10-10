@@ -1,0 +1,9 @@
+id: b5f5a382-824a-45d5-a9ee-0b608bcfae61
+method: GET
+url: https://numericlabs.lxd/api/v1/service-accounts
+status: 200
+durationMs: 53
+responseSize: 214
+timestamp: 2026-09-26T11:50:24.855867399Z
+collection: api-4
+requestName: List Service Accounts

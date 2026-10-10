@@ -9,3 +9,17 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+docs: |-
+  ## List Sessions
+
+  Lists the active sessions of the current user.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `GET` |
+  | Path | `/api/v1/users/sessions` |
+  | Auth | Requires a valid bearer access token. |
+
+  **Notes**
+
+  Only the current user's sessions are returned.

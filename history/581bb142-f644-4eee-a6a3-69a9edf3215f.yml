@@ -1,0 +1,9 @@
+id: 581bb142-f644-4eee-a6a3-69a9edf3215f
+method: GET
+url: https://api.rocketvault.numericlabs.io/api/v1/vaults/rocket-api-vault/secrets
+status: 401
+durationMs: 136
+responseSize: 28
+timestamp: 2026-10-09T11:34:19.787893052Z
+collection: api-4
+requestName: List Secrets

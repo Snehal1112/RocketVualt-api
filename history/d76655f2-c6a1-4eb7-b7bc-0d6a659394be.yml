@@ -1,0 +1,9 @@
+id: d76655f2-c6a1-4eb7-b7bc-0d6a659394be
+method: POST
+url: https://api.rocketvault.numericlabs.io/api/v1/users/login
+status: 200
+durationMs: 684
+responseSize: 679
+timestamp: 2026-09-23T13:41:20.543246080Z
+collection: api-4
+requestName: Login

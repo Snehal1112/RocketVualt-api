@@ -106,3 +106,6 @@ docs: |-
   | `src/stores/git-store.ts` | Add `applyStashMany`, `popStashMany`, `dropStashMany` |
   | `src/components/git/GitStashSection.tsx` | Add `selectedIndices` state, checkbox reveal logic, sticky action bar |
 globalEnvironment: Gloabl-local
+requestGuardPolicy:
+  blockScriptRedirectsToInternalHosts: true
+  alsoBlockPrivateRanges: true

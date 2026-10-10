@@ -9,3 +9,17 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+docs: |-
+  ## Backup Certificate
+
+  Creates a backup of a certificate that can later be restored.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `POST` |
+  | Path | `/api/v1/certificates/{certificate_id}/backup` |
+  | Auth | Requires a valid bearer token and a role assignment in this vault that grants the matching data action. The global `admin` role does not bypass this check. |
+
+  **Parameters**
+
+  - `certificate_id` (path): UUID of the certificate.

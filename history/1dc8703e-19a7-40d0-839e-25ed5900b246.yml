@@ -1,0 +1,9 @@
+id: 1dc8703e-19a7-40d0-839e-25ed5900b246
+method: GET
+url: https://api.rocketvault.numericlabs.io/api/v1/service-accounts/bfdf6b9c-0806-48b6-b50b-3edc6f3bc4e2
+status: 200
+durationMs: 269
+responseSize: 190
+timestamp: 2026-09-22T17:12:43.734395688Z
+collection: api-4
+requestName: Get Service Account

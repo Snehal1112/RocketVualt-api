@@ -1,0 +1,102 @@
+name: flow-api4
+nodes:
+- id: 4a072e1e-e011-42f8-aa8c-d075433c268c
+  kind:
+    kind: Request
+    label: Refresh Token
+    source:
+      type: Saved
+      request_path: auth/refresh-token.yml
+  position:
+    x: 239.32827127373247
+    y: 318.5385517369079
+- id: output-1790528978427-1
+  kind:
+    kind: Output
+    label: New Output
+  position:
+    x: 836.9792584067933
+    y: 403.2981804902068
+- id: input-1790529045546-2
+  kind:
+    kind: Input
+    label: New Input
+    value: ''
+  position:
+    x: 490.3717101633242
+    y: 564.4564843499238
+- id: output-1790606196633-1
+  kind:
+    kind: Output
+    label: New Output
+  position:
+    x: 1280.3508971136087
+    y: 58.676398101892936
+- id: 038aef9f-cca6-4c6a-af0f-069f85ab420b
+  kind:
+    kind: Request
+    label: List Vaults
+    source:
+      type: Saved
+      request_path: vaults/list-vaults.yml
+  position:
+    x: 846.4006126636707
+    y: -68.84099510525547
+- id: output-1790636725862-1
+  kind:
+    kind: Output
+    label: New Output
+  position:
+    x: 836.5
+    y: 522.5
+- id: if-1790636778437-2
+  kind:
+    kind: If
+    label: New If
+    condition: response.status === 200
+  position:
+    x: 495.5
+    y: -24.0
+edges:
+- id: aabdb1e2-e5f5-4fdc-81fb-c6c3d9a96d89
+  source_node_id: 4a072e1e-e011-42f8-aa8c-d075433c268c
+  target_node_id: output-1790528978427-1
+  target_field: value
+  expression: response.body
+- id: 55860eab-4647-4faf-a5bd-9c98674b051b
+  source_node_id: input-1790529045546-2
+  target_node_id: output-1790528978427-1
+  target_field: value
+  expression: response.body
+- id: 7f4ebc00-10e3-4e5e-8e17-75e67e388258
+  source_node_id: 038aef9f-cca6-4c6a-af0f-069f85ab420b
+  target_node_id: output-1790606196633-1
+  target_field: value
+  expression: response.body
+- id: f50eaf54-fb0e-493c-a59e-7aaced80c752
+  source_node_id: 4a072e1e-e011-42f8-aa8c-d075433c268c
+  target_node_id: 038aef9f-cca6-4c6a-af0f-069f85ab420b
+  target_field: url
+  expression: response.body
+- id: 64c1d844-176b-45ac-a53f-0c0b9d4a0c4f
+  source_node_id: 4a072e1e-e011-42f8-aa8c-d075433c268c
+  target_node_id: output-1790636725862-1
+  target_field: trigger
+  expression: ''
+- id: 4177930e-5ca4-48a5-919c-dc37771b2315
+  source_node_id: if-1790636778437-2
+  target_node_id: output-1790528978427-1
+  target_field: value
+  expression: response.body
+  source_handle: 'false'
+- id: 77112e1a-feb0-4f7e-818e-c63cc32d5ef3
+  source_node_id: if-1790636778437-2
+  target_node_id: output-1790636725862-1
+  target_field: value
+  expression: response.body
+  source_handle: 'true'
+- id: 3ece7937-243e-40c9-85ba-282234e54b64
+  source_node_id: 4a072e1e-e011-42f8-aa8c-d075433c268c
+  target_node_id: if-1790636778437-2
+  target_field: input
+  expression: ''

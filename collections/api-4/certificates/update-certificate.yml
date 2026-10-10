@@ -17,3 +17,28 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+docs: |-
+  ## Update Certificate
+
+  Updates the properties of a certificate.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `PUT` |
+  | Path | `/api/v1/vaults/{vault_name}/certificates/{certificate_id}` |
+  | Auth | Requires a valid bearer token and a role assignment in this vault that grants the matching data action. The global `admin` role does not bypass this check. |
+
+  **Parameters**
+
+  - `vault_name` (path): Name of the vault.
+  - `certificate_id` (path): UUID of the certificate.
+
+  **Request body**
+
+  ```json
+  {
+    "name": "my-cert-updated",
+    "auto_renew": false,
+    "tags": ["env:prod"]
+  }
+  ```

@@ -20,3 +20,34 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+docs: |-
+  ## Create Certificate
+
+  Creates a new certificate.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `POST` |
+  | Path | `/api/v1/vaults/{vault_name}/certificates` |
+  | Auth | Requires a valid bearer token and a role assignment in this vault that grants the matching data action. The global `admin` role does not bypass this check. |
+
+  **Parameters**
+
+  - `vault_name` (path): Name of the vault.
+
+  **Request body**
+
+  ```json
+  {
+    "name": "my-cert",
+    "key_id": "{{key_id}}",
+    "validity_days": 365,
+    "auto_renew": true,
+    "renewal_days": 30,
+    "tags": ["env:dev"]
+  }
+  ```
+
+  **Notes**
+
+  Use the policy endpoints to configure issuance and renewal.

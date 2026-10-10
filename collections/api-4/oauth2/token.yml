@@ -6,3 +6,17 @@ info:
 http:
   method: POST
   url: '{{base_url}}/api/v1/oauth2/token'
+docs: |-
+  ## OAuth2 Client Credentials Token
+
+  Issues an access token with the OAuth2 client credentials grant (RFC 6749, section 4.4).
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `POST` |
+  | Path | `/api/v1/oauth2/token` |
+  | Auth | None. This endpoint is public. |
+
+  **Notes**
+
+  Only `grant_type=client_credentials` is supported. Other grant types return `400 unsupported_grant_type`.

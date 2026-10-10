@@ -1,0 +1,9 @@
+id: 7a994a2a-ed60-4d9f-a6e9-5e78760e970c
+method: POST
+url: https://api.rocketvault.numericlabs.io/api/v1/vaults/numericlabs-api-vault/secrets/export
+status: 200
+durationMs: 570
+responseSize: 125
+timestamp: 2026-09-24T20:40:37.249695810Z
+collection: api-4
+requestName: Export Secrets

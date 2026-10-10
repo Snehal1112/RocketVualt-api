@@ -15,3 +15,26 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+docs: |-
+  ## Update Access Policy
+
+  Replaces the fields of an existing access policy.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `PUT` |
+  | Path | `/api/v1/vaults/{vault_name}/access-policies/{policy_id}` |
+  | Auth | Requires a valid bearer token with the global `admin` role. |
+
+  **Parameters**
+
+  - `vault_name` (path): Name of the vault.
+  - `policy_id` (path): UUID of the access policy.
+
+  **Request body**
+
+  ```json
+  {
+    "effect": "deny"
+  }
+  ```

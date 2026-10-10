@@ -9,3 +9,17 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+docs: |-
+  ## List Access Policies
+
+  Lists all access policies in this vault.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `GET` |
+  | Path | `/api/v1/vaults/{vault_name}/access-policies` |
+  | Auth | Requires a valid bearer token with the global `admin` role. |
+
+  **Parameters**
+
+  - `vault_name` (path): Name of the vault.

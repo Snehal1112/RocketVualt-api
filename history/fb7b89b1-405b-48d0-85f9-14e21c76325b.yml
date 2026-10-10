@@ -1,0 +1,9 @@
+id: fb7b89b1-405b-48d0-85f9-14e21c76325b
+method: POST
+url: https://numericlabs.lxd/api/v1/service-accounts/5eb851e7-d4d2-44c3-8737-1557ec29b29d/rotate
+status: 200
+durationMs: 591
+responseSize: 85
+timestamp: 2026-09-26T12:00:42.735377443Z
+collection: api-4
+requestName: Rotate Service Account Secret

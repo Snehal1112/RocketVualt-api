@@ -2,7 +2,6 @@ uid: 0f24f642-196c-4464-a34e-800a6c73ab11
 info:
   name: Create Vault
   type: http
-  seq: 1
 http:
   method: POST
   url: '{{base_url}}/api/v1/vaults'
@@ -10,7 +9,7 @@ http:
     type: json
     data: |-
       {
-        "name": "my-vault",
+        "name": "numericlabs-api-vault",
         "enabled": true,
         "purge_protection": false,
         "retention_days": 90,
@@ -18,6 +17,37 @@ http:
           "env": "dev"
         }
       }
-  auth:
-    type: bearer
-    token: '{{token}}'
+settings:
+  encodeUrl: true
+  timeout: 0.0
+  followRedirects: true
+  maxRedirects: 5.0
+  verifySsl: true
+docs: |-
+  ## Create Vault
+
+  Creates a vault.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `POST` |
+  | Path | `/api/v1/vaults` |
+  | Auth | Requires a valid bearer token. Creating a vault needs a global grant or a vault provisioning grant. |
+
+  **Request body**
+
+  ```json
+  {
+    "name": "numericlabs-api-vault",
+    "enabled": true,
+    "purge_protection": false,
+    "retention_days": 90,
+    "tags": {
+      "env": "dev"
+    }
+  }
+  ```
+
+  **Notes**
+
+  A non-admin creator receives management rights over the new vault.

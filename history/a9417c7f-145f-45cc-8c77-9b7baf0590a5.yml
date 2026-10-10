@@ -1,0 +1,9 @@
+id: a9417c7f-145f-45cc-8c77-9b7baf0590a5
+method: GET
+url: https://numericlabs.lxd/api/v1/users?page=0&per_page=20
+status: 200
+durationMs: 24
+responseSize: 145
+timestamp: 2026-09-26T11:43:35.863247712Z
+collection: api-4
+requestName: List Users

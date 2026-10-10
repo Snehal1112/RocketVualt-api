@@ -17,3 +17,28 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+runtime: {}
+docs: |-
+  ## Upsert Vault Webhook
+
+  Creates or replaces the webhook configuration of a vault.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `PUT` |
+  | Path | `/api/v1/vaults/{vault_name}/webhook` |
+  | Auth | Requires a valid bearer token with vault management rights for this vault (a vault-scoped `vaults:manage` grant or the `Key Vault Administrator` role). |
+
+  **Parameters**
+
+  - `vault_name` (path): Name of the vault.
+
+  **Request body**
+
+  ```json
+  {
+    "url": "https://example.com/webhooks/rocketvault",
+    "rotate_secret": false,
+    "enabled": true
+  }
+  ```

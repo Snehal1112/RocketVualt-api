@@ -10,31 +10,110 @@ http:
     data: |-
       {
         "username": "{{username}}",
-        "password": "{{password}}",
+        "password": "{{pass.numericlabs-local-admin}}",
         "totp_code": "{{totp_code}}"
       }
+  auth: inherit
 runtime:
   variables:
   - name: username
-    initial: admin
+    initial: admin@numericlabs
   - name: password
     initial: Snehal@1977
-  - name: totp-cide
-    initial: '311775'
+  - name: totp_code
+    initial: '758603'
   scripts:
   - type: after-response
     code: |-
-      // const res = bru.response.getBody();
-      // if (res && res.token) {
-      //   bru.setEnvVar("token", res.token);
-      //   console.log("Token captured successfully");
-      // }
-
-
-      console.log("sddd")
+      if (res.getStatus() === 200) {
+        const { token, refresh_token } = res.getBody();
+        rok.setEnvVar("token", token);
+        rok.setEnvVar("refresh_token", refresh_token);
+      }
+  assertions:
+  - expression: res.status
+    operator: eq
+    value: '200'
+  - expression: res.body.token
+    operator: isNotEmpty
+    value: ''
+  - expression: res.body.refresh_token
+    operator: isNotEmpty
+    value: ''
+  - expression: res.body.user_id
+    operator: isNotEmpty
+    value: ''
+  - expression: res.body.username
+    operator: isNotEmpty
+    value: ''
+  - expression: res.body.roles
+    operator: isDefined
+    value: ''
 settings:
   encodeUrl: true
   timeout: 0.0
   followRedirects: true
   maxRedirects: 5.0
   verifySsl: true
+docs: |-
+  ## Login
+
+  Signs in a user with a username, password, and TOTP code. On success, it returns an access token and a refresh token. Send the access token with every other request that needs authentication.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `POST` |
+  | Path | `/api/v1/users/login` |
+  | Auth | None. This endpoint is public. |
+  | Content-Type | `application/json` |
+  | Rate limit | 5 requests per minute per IP |
+
+  ### Request body
+
+  | Field | Type | Required | Description |
+  | --- | --- | --- | --- |
+  | `username` | string | Yes | Username of the account. |
+  | `password` | string | Yes | Account password. |
+  | `totp_code` | string | Yes | Current 6-digit code from the account's authenticator app. |
+
+  ```json
+  {
+    "username": "<username>",
+    "password": "<password>",
+    "totp_code": "<6-digit code>"
+  }
+  ```
+
+  ### Response (200 OK)
+
+  ```json
+  {
+    "token": "<access token (JWT)>",
+    "refresh_token": "<refresh token>",
+    "user_id": "<user UUID>",
+    "username": "<username>",
+    "roles": ["admin"]
+  }
+  ```
+
+  | Field | Description |
+  | --- | --- |
+  | `token` | JWT access token. Send it as `Authorization: Bearer <token>`. It expires after 15 minutes by default. |
+  | `refresh_token` | Long-lived token for getting a new access token. It is valid for 7 days. |
+  | `user_id` | UUID of the signed-in user. |
+  | `username` | Username of the signed-in user. |
+  | `roles` | Global roles of the user, such as `admin` or `user`. |
+
+  ### Errors
+
+  | Status | Meaning |
+  | --- | --- |
+  | `403 Forbidden` | Authentication failed. The username, password, or TOTP code is wrong. The response does not say which one. |
+  | `429 Too Many Requests` | Too many requests from this IP, or too many failed logins for this account. Wait before you retry. Each failed attempt on an account adds a longer delay. This is a temporary delay, not a permanent lock. |
+
+  ### Notes
+
+  - **TOTP is required.** Each code is valid for about 30 seconds. Use the newest code from the authenticator app.
+  - **Refresh tokens are not rotated.** Calling `POST /api/v1/users/refresh` returns the same refresh token. Roles are read from the database on each refresh, so role changes apply at the next refresh.
+  - **Collection behavior.** After a 200 response, the after-response script saves `token` and `refresh_token` as environment variables. Other requests in the collection use these values.
+  - **Sample values.** This request stores example credentials in its variables. Replace them with your own values before you share the collection.

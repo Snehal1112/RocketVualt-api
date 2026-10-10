@@ -1,0 +1,9 @@
+id: ab0ca91c-9f7c-4663-94d2-b4a0c77f4421
+method: GET
+url: https://api.rocketvault.numericlabs.io/api/v1/vaults/rocket-api-vault/secrets/a1088f8c-de6d-4416-ad70-cc58b3e98c76
+status: 200
+durationMs: 110
+responseSize: 238
+timestamp: 2026-10-09T11:35:09.089723562Z
+collection: api-4
+requestName: Get Secret

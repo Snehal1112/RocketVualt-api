@@ -1,0 +1,9 @@
+id: 2f81d520-3a05-429f-abd7-a80ffe482ba7
+method: POST
+url: https://numericlabs.lxd/api/v1/vaults/numericlabs-api-vault/secrets
+status: 201
+durationMs: 237
+responseSize: 221
+timestamp: 2026-09-26T11:57:49.427271742Z
+collection: api-4
+requestName: Create Secret

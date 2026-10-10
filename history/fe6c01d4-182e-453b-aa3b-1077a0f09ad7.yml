@@ -1,0 +1,9 @@
+id: fe6c01d4-182e-453b-aa3b-1077a0f09ad7
+method: POST
+url: https://numericlabs.lxd/api/v1/vaults
+status: 201
+durationMs: 18
+responseSize: 250
+timestamp: 2026-09-26T08:39:37.102994637Z
+collection: api-4
+requestName: Create Vault

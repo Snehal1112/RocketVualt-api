@@ -9,3 +9,18 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+docs: |-
+  ## Rotate Key
+
+  Creates a new version of a key and makes it the current version.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `POST` |
+  | Path | `/api/v1/vaults/{vault_name}/keys/{key_id}/rotate` |
+  | Auth | Requires a valid bearer token and a role assignment in this vault that grants the matching data action. The global `admin` role does not bypass this check. |
+
+  **Parameters**
+
+  - `vault_name` (path): Name of the vault.
+  - `key_id` (path): UUID of the key.

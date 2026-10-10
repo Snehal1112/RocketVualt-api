@@ -9,3 +9,13 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+docs: |-
+  ## Revoke All Sessions
+
+  Revokes all sessions of the current user, signing them out everywhere.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `DELETE` |
+  | Path | `/api/v1/users/sessions` |
+  | Auth | Requires a valid bearer access token. |

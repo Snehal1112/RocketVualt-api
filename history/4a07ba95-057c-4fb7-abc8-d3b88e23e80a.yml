@@ -1,0 +1,9 @@
+id: 4a07ba95-057c-4fb7-abc8-d3b88e23e80a
+method: DELETE
+url: https://api.rocketvault.numericlabs.io/api/v1/vaults/rocket-api-vault/keys/f34c5cf3-0f1e-445a-8b5a-c703348b868c
+status: 200
+durationMs: 111
+responseSize: 187
+timestamp: 2026-10-07T11:42:15.073787745Z
+collection: api-4
+requestName: Delete Key

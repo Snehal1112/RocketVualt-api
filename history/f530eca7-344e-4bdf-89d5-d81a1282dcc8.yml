@@ -1,0 +1,9 @@
+id: f530eca7-344e-4bdf-89d5-d81a1282dcc8
+method: GET
+url: https://numericlabs.lxd/api/v1/vaults
+status: 200
+durationMs: 147
+responseSize: 484
+timestamp: 2026-09-26T11:36:35.775742972Z
+collection: api-4
+requestName: List Vaults

@@ -1,0 +1,9 @@
+id: 43dca785-39c4-44ec-96b8-d02eccc6ea6b
+method: POST
+url: https://numericlabs.lxd/api/v1/users/login
+status: 200
+durationMs: 390
+responseSize: 978
+timestamp: 2026-09-26T12:05:46.657555153Z
+collection: api-4
+requestName: Login

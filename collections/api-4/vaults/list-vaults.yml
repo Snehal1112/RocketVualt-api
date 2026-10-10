@@ -2,10 +2,41 @@ uid: 4a26ecae-fce3-4a9e-932f-fbd9ca931555
 info:
   name: List Vaults
   type: http
-  seq: 2
 http:
   method: GET
   url: '{{base_url}}/api/v1/vaults'
-  auth:
-    type: bearer
-    token: '{{token}}'
+  auth: inherit
+runtime:
+  variables:
+  - name: ''
+    value: '{{password.my-secret}}'
+    initial: '{{password.my-secret}}'
+    disabled: true
+  scripts:
+  - type: after-response
+    code: |-
+      if (res.getStatus() >= 200 && res.getStatus() < 300) {
+        const t = rok.getSecretVar("pass.numericlabs-local-admin");
+        console.log(String(t), "numericlabs-local-admin")
+        console.log(rok.interpolate("{{pass.numericlabs-local-admin}}"));
+      }
+settings:
+  encodeUrl: true
+  timeout: 0.0
+  followRedirects: true
+  maxRedirects: 5.0
+  verifySsl: true
+docs: |-
+  ## List Vaults
+
+  Lists the vaults the caller can access.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `GET` |
+  | Path | `/api/v1/vaults` |
+  | Auth | Requires a valid bearer token. Results are limited to vaults the caller can access. |
+
+  **Notes**
+
+  Admins and global grant holders see every vault.

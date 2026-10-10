@@ -6,3 +6,17 @@ info:
 http:
   method: GET
   url: '{{base_url}}/api/v1/oidc/login'
+docs: |-
+  ## OIDC Login
+
+  Starts an OIDC login by redirecting to the external identity provider.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `GET` |
+  | Path | `/api/v1/oidc/login` |
+  | Auth | None. This endpoint is public. |
+
+  **Notes**
+
+  OIDC is disabled by default. `cli_redirect_uri` must be a `http://127.0.0.1` or `localhost` URL with an explicit port.

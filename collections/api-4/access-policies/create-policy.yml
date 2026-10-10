@@ -19,3 +19,33 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+docs: |-
+  ## Create Access Policy
+
+  Creates an explicit access policy for a principal in this vault.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `POST` |
+  | Path | `/api/v1/vaults/{vault_name}/access-policies` |
+  | Auth | Requires a valid bearer token with the global `admin` role. |
+
+  **Parameters**
+
+  - `vault_name` (path): Name of the vault.
+
+  **Request body**
+
+  ```json
+  {
+    "principal_id": "{{user_id}}",
+    "principal_type": "user",
+    "resource_type": "secrets",
+    "operation": "get",
+    "effect": "allow"
+  }
+  ```
+
+  **Notes**
+
+  Policies are checked before role assignments. A matching deny always wins.

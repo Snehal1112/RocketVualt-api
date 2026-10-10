@@ -1,0 +1,9 @@
+id: 0bbc835a-7197-4c9a-b5c7-b8e40d062654
+method: DELETE
+url: https://numericlabs.lxd/api/v1/vaults/numericlabs-api-vault/role-assignments/e7e73d72-861f-47e1-9e46-5ba68526d35b
+status: 200
+durationMs: 35
+responseSize: 16
+timestamp: 2026-09-26T11:45:36.084833637Z
+collection: api-4
+requestName: Delete Role Assignment

@@ -1,0 +1,9 @@
+id: 25495b9f-9015-4ac5-bbc4-b4506a0962b2
+method: POST
+url: https://api.rocketvault.numericlabs.io/api/v1/vaults/rocket-api-vault/keys/7e7484f0-7878-4ef1-9f6d-87c23147d9b7/encrypt
+status: 400
+durationMs: 249
+responseSize: 203
+timestamp: 2026-10-07T11:49:34.252780711Z
+collection: api-4
+requestName: Encrypt Key

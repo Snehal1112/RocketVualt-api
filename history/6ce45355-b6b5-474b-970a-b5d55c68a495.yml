@@ -1,0 +1,9 @@
+id: 6ce45355-b6b5-474b-970a-b5d55c68a495
+method: GET
+url: http://127.0.0.1:18777/
+status: 200
+durationMs: 1
+responseSize: 3
+timestamp: 2026-09-26T23:04:10.599037900Z
+collection: null
+requestName: null

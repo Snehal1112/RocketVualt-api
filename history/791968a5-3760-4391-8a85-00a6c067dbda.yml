@@ -1,0 +1,9 @@
+id: 791968a5-3760-4391-8a85-00a6c067dbda
+method: POST
+url: https://numericlabs.lxd/api/v1/vaults/numericlabs-api-vault/role-assignments
+status: 201
+durationMs: 173
+responseSize: 310
+timestamp: 2026-09-26T11:57:26.074668627Z
+collection: api-4
+requestName: Create Role Assignment

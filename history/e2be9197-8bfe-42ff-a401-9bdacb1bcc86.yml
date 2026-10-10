@@ -1,0 +1,9 @@
+id: e2be9197-8bfe-42ff-a401-9bdacb1bcc86
+method: GET
+url: https://api.rocketvault.numericlabs.io/jwks.json
+status: 200
+durationMs: 236
+responseSize: 189
+timestamp: 2026-10-07T11:17:31.826931011Z
+collection: api-4
+requestName: Get JWKS

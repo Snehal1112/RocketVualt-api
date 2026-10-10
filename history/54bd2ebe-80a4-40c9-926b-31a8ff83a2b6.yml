@@ -1,0 +1,9 @@
+id: 54bd2ebe-80a4-40c9-926b-31a8ff83a2b6
+method: GET
+url: https://api.rocketvault.numericlabs.io/api/v1/service-accounts
+status: 200
+durationMs: 662
+responseSize: 223
+timestamp: 2026-09-22T17:11:40.386726054Z
+collection: api-4
+requestName: List Service Accounts

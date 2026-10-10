@@ -1,0 +1,9 @@
+id: de5df3a8-b2bd-490e-a34b-bff8e1ab71f1
+method: DELETE
+url: https://api.rocketvault.numericlabs.io/api/v1/vaults/rocket-api-vault/role-assignments/cc389ddd-c6ff-49b5-aaf0-cc30fe9be9df
+status: 200
+durationMs: 437
+responseSize: 16
+timestamp: 2026-10-04T21:36:45.446713326Z
+collection: api-4
+requestName: Delete Role Assignment

@@ -9,3 +9,19 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+docs: |-
+  ## List Certificates
+
+  Lists certificates in this vault.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `GET` |
+  | Path | `/api/v1/vaults/{vault_name}/certificates?page=0&per_page=20` |
+  | Auth | Requires a valid bearer token and a role assignment in this vault that grants the matching data action. The global `admin` role does not bypass this check. |
+
+  **Parameters**
+
+  - `vault_name` (path): Name of the vault.
+  - `page` (query): Page number, starting from `0`.
+  - `per_page` (query): Number of items per page.

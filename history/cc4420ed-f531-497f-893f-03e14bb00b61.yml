@@ -1,0 +1,9 @@
+id: cc4420ed-f531-497f-893f-03e14bb00b61
+method: GET
+url: https://api.rocketvault.numericlabs.io/api/v1/vaults/rocket-api-vault/role-assignments
+status: 200
+durationMs: 106
+responseSize: 318
+timestamp: 2026-10-04T12:12:23.647306320Z
+collection: api-4
+requestName: List Role Assignments

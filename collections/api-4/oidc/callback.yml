@@ -6,3 +6,17 @@ info:
 http:
   method: GET
   url: '{{base_url}}/api/v1/oidc/callback'
+docs: |-
+  ## OIDC Callback
+
+  Completes an OIDC login after the identity provider redirects back.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `GET` |
+  | Path | `/api/v1/oidc/callback` |
+  | Auth | None. This endpoint is public. |
+
+  **Notes**
+
+  This endpoint is called by the browser during login. It is not meant to be called directly. OIDC must be enabled on the server.

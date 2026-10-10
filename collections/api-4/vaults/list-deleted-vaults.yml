@@ -9,3 +9,17 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+docs: |-
+  ## List Deleted Vaults
+
+  Lists vaults. The name suggests soft-deleted vaults, but see the note.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `GET` |
+  | Path | `/api/v1/vaults` |
+  | Auth | Requires a valid bearer token. Results are limited to vaults the caller can access. |
+
+  **Notes**
+
+  This request sends `GET /api/v1/vaults` without `include_deleted=true`, so it returns active vaults only. Add `?include_deleted=true` to list soft-deleted vaults.

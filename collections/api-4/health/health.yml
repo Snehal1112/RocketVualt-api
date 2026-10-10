@@ -2,7 +2,86 @@ uid: 53419b1e-9cf0-4527-9b4a-8edd48a5d35f
 info:
   name: Health Check
   type: http
-  seq: 1
 http:
   method: GET
   url: '{{base_url}}/api/v1/health'
+runtime: {}
+settings:
+  encodeUrl: true
+  timeout: 0.0
+  followRedirects: true
+  maxRedirects: 5.0
+  verifySsl: true
+docs: |-
+  ## Health Check
+
+  Returns detailed health and runtime metrics for the server process and its database connection pool. Use it to inspect the server. For simple probes, use the liveness and readiness checks.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `GET` |
+  | Path | `/api/v1/health` |
+  | Auth | None. This endpoint is public. |
+
+  ### Response (200 OK)
+
+  ```json
+  {
+    "memory_usage": {
+      "alloc_bytes": 0,
+      "total_alloc_bytes": 0,
+      "sys_bytes": 0,
+      "heap_alloc_bytes": 0,
+      "heap_objects": 0,
+      "num_gc": 0
+    },
+    "cpu_stats": { "goroutines": 0, "cgo_calls": 0 },
+    "database_stats": {
+      "open_connections": 0,
+      "in_use": 0,
+      "idle": 0,
+      "wait_count": 0,
+      "wait_duration": 0,
+      "utilization_percent": 0,
+      "query_count": 0,
+      "slow_query_count": 0,
+      "avg_query_time": 0,
+      "total_query_time": 0,
+      "health_status": "healthy"
+    },
+    "uptime": 0,
+    "go_version": "<Go version>",
+    "goroutines": 0,
+    "timestamp": "<RFC 3339 time>",
+    "query_metrics": {
+      "query_count": 0,
+      "total_duration": "<duration>",
+      "avg_duration": "<duration>",
+      "slow_queries": 0
+    }
+  }
+  ```
+
+  The example is shortened. The memory block also has more Go runtime counters, such as `heap_sys_bytes`, `heap_idle_bytes`, `stack_inuse_bytes`, `next_gc_bytes`, and `last_gc_timestamp`.
+
+  | Field | Description |
+  | --- | --- |
+  | `memory_usage` | Go runtime memory statistics, in bytes unless the name says otherwise. |
+  | `cpu_stats` | Goroutine count and cgo call count. |
+  | `database_stats` | Connection pool and query statistics. `health_status` is `healthy`, `warning`, `degraded`, or `critical`. |
+  | `uptime` | Time since the health collector started, as a Go duration in nanoseconds. |
+  | `go_version` | Go runtime version. |
+  | `goroutines` | Current number of goroutines. |
+  | `timestamp` | Time the metrics were collected. |
+  | `query_metrics` | Query count, total and average duration (formatted text), and number of slow queries. |
+
+  ### Errors
+
+  | Status | Meaning |
+  | --- | --- |
+  | `500 Internal Server Error` | The server could not collect or encode the metrics. |
+
+  ### Notes
+
+  - **Always 200 on success.** This endpoint reports `database_stats.health_status`, but it does not change the HTTP status based on it.
+  - **Database-only check.** `GET /api/v1/health/database` is a separate route that returns 503 when the database is degraded. It requires a session and is not part of this collection.

@@ -1,0 +1,10 @@
+id: cbd7e6c4-1c6e-4507-80a5-9dee7935f9cc
+method: GET
+url: https://api.rocketvault.numericlabs.io/api/v1/health/live
+status: 200
+durationMs: 85
+responseSize: 19
+timestamp: 2026-10-10T05:51:45.245907142Z
+collection: api-4
+requestName: Liveness Check
+runSource: manual

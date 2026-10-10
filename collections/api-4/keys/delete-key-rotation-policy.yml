@@ -9,3 +9,18 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+docs: |-
+  ## Delete Key Rotation Policy
+
+  Removes the automatic rotation policy from a key.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `DELETE` |
+  | Path | `/api/v1/vaults/{vault_name}/keys/{key_id}/rotationpolicy` |
+  | Auth | Requires a valid bearer token and a role assignment in this vault that grants the matching data action. The global `admin` role does not bypass this check. |
+
+  **Parameters**
+
+  - `vault_name` (path): Name of the vault.
+  - `key_id` (path): UUID of the key.

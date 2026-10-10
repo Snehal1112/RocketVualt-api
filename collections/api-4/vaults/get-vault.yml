@@ -9,3 +9,17 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+docs: |-
+  ## Get Vault
+
+  Returns a vault's details.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `GET` |
+  | Path | `/api/v1/vaults/{vault_name}` |
+  | Auth | Requires a valid bearer token with vault management rights for this vault (a vault-scoped `vaults:manage` grant or the `Key Vault Administrator` role). |
+
+  **Parameters**
+
+  - `vault_name` (path): Name of the vault.

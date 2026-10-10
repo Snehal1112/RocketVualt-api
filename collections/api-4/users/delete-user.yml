@@ -9,3 +9,17 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+docs: |-
+  ## Delete User
+
+  Deletes a user.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `DELETE` |
+  | Path | `/api/v1/users/{user_id}` |
+  | Auth | Requires a valid bearer token with the global `admin` role. |
+
+  **Parameters**
+
+  - `user_id` (path): UUID of the user.

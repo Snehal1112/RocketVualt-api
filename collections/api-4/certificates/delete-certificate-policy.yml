@@ -9,3 +9,18 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+docs: |-
+  ## Delete Certificate Policy
+
+  Removes the issuance policy from a certificate.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `DELETE` |
+  | Path | `/api/v1/vaults/{vault_name}/certificates/{certificate_id}/policy` |
+  | Auth | Requires a valid bearer token and a role assignment in this vault that grants the matching data action. The global `admin` role does not bypass this check. |
+
+  **Parameters**
+
+  - `vault_name` (path): Name of the vault.
+  - `certificate_id` (path): UUID of the certificate.

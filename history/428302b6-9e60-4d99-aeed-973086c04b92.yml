@@ -1,0 +1,9 @@
+id: 428302b6-9e60-4d99-aeed-973086c04b92
+method: POST
+url: https://api.rocketvault.numericlabs.io/api/v1/vaults
+status: 201
+durationMs: 372
+responseSize: 240
+timestamp: 2026-09-27T17:18:39.941519148Z
+collection: api-4
+requestName: Create Vault

@@ -9,3 +9,18 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+docs: |-
+  ## Delete Access Policy
+
+  Deletes an access policy. Removing a deny policy can restore access that it was blocking.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `DELETE` |
+  | Path | `/api/v1/vaults/{vault_name}/access-policies/{policy_id}` |
+  | Auth | Requires a valid bearer token with the global `admin` role. |
+
+  **Parameters**
+
+  - `vault_name` (path): Name of the vault.
+  - `policy_id` (path): UUID of the access policy.

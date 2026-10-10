@@ -1,0 +1,9 @@
+id: ca110413-a2cc-4395-befa-b3557f2f54ed
+method: GET
+url: https://api.rocketvault.numericlabs.io/api/v1/vaults/rocket-api-vault/keys/56be9dd0-26a4-4ba1-9573-82dfe8c78f8b
+status: 200
+durationMs: 388
+responseSize: 240
+timestamp: 2026-09-24T20:47:14.563358492Z
+collection: api-4
+requestName: Get Key

@@ -1,3 +1,8 @@
-name: users
-uid: 9ae84620-70d2-48d7-8ae4-a6868d6a1d40
-type: folder
+info:
+  name: users
+  uid: 9ae84620-70d2-48d7-8ae4-a6868d6a1d40
+  type: folder
+request:
+  auth:
+    type: bearer
+    token: '{{token}}'

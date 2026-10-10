@@ -9,3 +9,46 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+docs: |-
+  ## Rotate JWKS
+
+  Rotates the signing key that is used for access tokens. The server creates a new key and publishes it in the JWKS. The old key stays valid for an overlap period.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `POST` |
+  | Path | `/api/v1/jwks/rotate` |
+  | Auth | Bearer token. The user must have the global `admin` role. |
+
+  ### Response (200 OK)
+
+  ```json
+  {
+    "status": "ok",
+    "new_kid": "<new key ID>",
+    "overlap_until": "<time the old key stops being valid>"
+  }
+  ```
+
+  | Field | Description |
+  | --- | --- |
+  | `status` | `ok` when the rotation worked. |
+  | `new_kid` | Key ID of the new signing key. |
+  | `overlap_until` | Time until which the previous key stays valid. |
+
+  ### Errors
+
+  | Status | Meaning |
+  | --- | --- |
+  | `400 Bad Request` | The signing key source does not support rotation. Only the `self_pki` key source can rotate. |
+  | `403 Forbidden` | The caller does not have the `admin` role. |
+  | `500 Internal Server Error` | The rotation failed. |
+  | `503 Service Unavailable` | No signing provider is available. |
+
+  A missing or invalid bearer token is rejected by the authentication middleware before the handler runs.
+
+  ### Notes
+
+  - **Sensitive operation.** Rotation can affect availability. Only admins can call it.
+  - **Audit.** Each attempt, successful or failed, is written to the audit log as `jwks_rotate`.
+  - **Request body.** None. This request sends no body.

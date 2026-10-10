@@ -22,3 +22,33 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+docs: |-
+  ## Upsert Certificate Policy
+
+  Creates or replaces the issuance policy of a certificate.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `PUT` |
+  | Path | `/api/v1/vaults/{vault_name}/certificates/{certificate_id}/policy` |
+  | Auth | Requires a valid bearer token and a role assignment in this vault that grants the matching data action. The global `admin` role does not bypass this check. |
+
+  **Parameters**
+
+  - `vault_name` (path): Name of the vault.
+  - `certificate_id` (path): UUID of the certificate.
+
+  **Request body**
+
+  ```json
+  {
+    "validity_months": 12,
+    "key_type": "RSA",
+    "key_size": 2048,
+    "subject": "CN=my-cert",
+    "sans": "DNS:example.com,DNS:www.example.com",
+    "auto_renew": true,
+    "days_before_expiry": 30,
+    "issuer_name": "Self"
+  }
+  ```

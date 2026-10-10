@@ -1,0 +1,9 @@
+id: dcac001c-5807-40c3-9f70-922444ff0cc9
+method: GET
+url: https://api.rocketvault.numericlabs.io/api/v1/vaults/rocket-api-vault/secrets/a1088f8c-de6d-4416-ad70-cc58b3e98c76/versions
+status: 200
+durationMs: 113
+responseSize: 3
+timestamp: 2026-10-06T05:24:43.560268868Z
+collection: api-4
+requestName: List Secret Versions

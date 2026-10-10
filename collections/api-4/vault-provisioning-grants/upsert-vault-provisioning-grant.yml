@@ -15,3 +15,29 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+docs: |-
+  ## Upsert Vault Provisioning Grant
+
+  Creates or updates a principal's vault provisioning grant.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `PUT` |
+  | Path | `/api/v1/vault-provisioning-grants/{principal_id}` |
+  | Auth | Requires a valid bearer token with the global `admin` role. |
+
+  **Parameters**
+
+  - `principal_id` (path): UUID of the principal (a user or a service account).
+
+  **Request body**
+
+  ```json
+  {
+    "quota": 5
+  }
+  ```
+
+  **Notes**
+
+  The grant lets the principal create vaults within a quota. Only admins can manage grants.

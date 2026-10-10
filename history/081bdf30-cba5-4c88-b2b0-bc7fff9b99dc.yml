@@ -1,0 +1,9 @@
+id: 081bdf30-cba5-4c88-b2b0-bc7fff9b99dc
+method: GET
+url: https://numericlabs.lxd/api/v1/vaults/numericlabs-api-vault/role-assignments
+status: 200
+durationMs: 24
+responseSize: 313
+timestamp: 2026-09-26T11:42:50.254299929Z
+collection: api-4
+requestName: List Role Assignments

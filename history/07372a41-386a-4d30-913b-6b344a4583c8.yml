@@ -1,0 +1,9 @@
+id: 07372a41-386a-4d30-913b-6b344a4583c8
+method: PUT
+url: https://api.rocketvault.numericlabs.io/api/v1/vaults/rocket-api-vault/secrets/bb1feb01-7000-4836-8f23-10232bd9f2e5
+status: 200
+durationMs: 482
+responseSize: 178
+timestamp: 2026-09-24T15:26:36.162021524Z
+collection: api-4
+requestName: Update Secret

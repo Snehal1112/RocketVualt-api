@@ -1,0 +1,9 @@
+id: 6442bd81-0c28-4457-a73c-ae13b2944183
+method: GET
+url: https://api.rocketvault.numericlabs.io/api/v1/vaults/rocket-api-vault/secrets/bb1feb01-7000-4836-8f23-10232bd9f2e5/versions/latest
+status: 200
+durationMs: 372
+responseSize: 253
+timestamp: 2026-09-24T20:42:21.306390860Z
+collection: api-4
+requestName: Get Latest Secret Version

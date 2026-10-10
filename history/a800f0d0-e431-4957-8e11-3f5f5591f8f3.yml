@@ -1,0 +1,9 @@
+id: a800f0d0-e431-4957-8e11-3f5f5591f8f3
+method: GET
+url: http://localhost:8774/api/v1/secrets?page=0&per_page=%7B%7Bapi_collection_pagesize%7D%7D
+status: 401
+durationMs: 26
+responseSize: 28
+timestamp: 2026-09-24T17:19:55.666703841Z
+collection: api
+requestName: List Secrets

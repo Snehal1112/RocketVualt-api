@@ -6,3 +6,35 @@ info:
 http:
   method: GET
   url: '{{base_url}}/api/v1/health/live'
+runtime: {}
+docs: |-
+  ## Liveness Check
+
+  Liveness probe. Returns 200 whenever the server process can handle a request.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `GET` |
+  | Path | `/api/v1/health/live` |
+  | Auth | None. This endpoint is public. |
+
+  ### Response (200 OK)
+
+  ```json
+  {
+    "status": "alive"
+  }
+  ```
+
+  | Field | Description |
+  | --- | --- |
+  | `status` | Always `alive` when the server responds. |
+
+  ### Errors
+
+  This handler has no error path. If the server is down, you get a connection error instead of an HTTP status.
+
+  ### Notes
+
+  - **What it tests.** Nothing beyond the fact that the handler runs. It does not check the database or any other dependency.
+  - **Use.** Container restart checks.

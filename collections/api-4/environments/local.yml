@@ -6,15 +6,27 @@ variables:
   value: admin
 - secret: true
   name: password
-- name: totp_code
-  value: '370989'
 - name: vault_name
-  value: my-vault
-- name: ca_cert_id
-  value: ''
+  value: rocket-api-vault
+- name: user_id
+  value: 7e3a3cdf-ba84-420e-842a-8e6b9d22a2d8
+- name: assignment_id
+  value: 51de8c3b-0dc7-4090-b834-f538f980f64b
+- name: secret_id
+  value: a1088f8c-de6d-4416-ad70-cc58b3e98c76
 - name: token
-  value: eyJhbGciOiJFUzI1NiIsImtpZCI6ImMzOWU1YTlkYjIxMGQyOWQiLCJ0eXAiOiJKV1QifQ.eyJ1c2VyX2lkIjoiNDY0M2RiYTktY2U1Ni00MjQ5LTgyMDYtMTY5MGFmY2U4MDViIiwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGVzIjpbImFkbWluIl0sInN1YiI6IjQ2NDNkYmE5LWNlNTYtNDI0OS04MjA2LTE2OTBhZmNlODA1YiIsImF1ZCI6WyJQQVNTV09SRF9NQU5BR0VSIl0sImV4cCI6MTc4OTkzNzYwMiwibmJmIjoxNzg5OTM0MDAyLCJpYXQiOjE3ODk5MzQwMDIsImp0aSI6IjMxYjBlNjRjLTZjZTEtNDcxMC05ZGY1LTI0ODViNTk1OTgxYiJ9.waQka64ag-mHz96l1LIuNNYyI_jnEKpyeDsjXsyY2FNLhN5Heb-Ubn3hChK9fT_pMrR5I-b4k5kJxDnxdvOWLA
-- name: password,
-  value: ''
+  value: eyJhbGciOiJFUzI1NiIsImtpZCI6IjA1NjQwMTg4ODFkM2MxNTQiLCJ0eXAiOiJKV1QifQ.eyJ1c2VyX2lkIjoiYmEzYmE4ZGUtYmRkYy00MzhhLTgxZTEtNjNlM2E0NDVkMjU5IiwidXNlcm5hbWUiOiJhZG1pbkBudW1lcmljbGFicyIsInJvbGVzIjpbImFkbWluIl0sInN1YiI6ImJhM2JhOGRlLWJkZGMtNDM4YS04MWUxLTYzZTNhNDQ1ZDI1OSIsImF1ZCI6WyJQQVNTV09SRF9NQU5BR0VSIl0sImV4cCI6MTc5MTYxMTk5NywibmJmIjoxNzkxNjA4Mzk3LCJpYXQiOjE3OTE2MDgzOTcsImp0aSI6IjY4ZWYwZjRmLTFiZWEtNDdiOS1hY2U2LTc3NzRiNzE0NzAyMCJ9.vrnIZQ-xWF4Ul8SNy0_7YYrmXArVKlLi2ILiGenyAzZg44OJXmDIAVjpqRQ132EX_wF24BHoU8O0t6Qz5hoVwg
 - name: refresh_token
-  value: 338edb23877abbd30fc9051592afd097d605302b10859727c8927e53f8c57192
+  value: 1f19b420c877a430076790c1965b522615be2ddd12ad9c3e9305780b070a3ee8
+- name: service_account_id
+  value: 7e3a3cdf-ba84-420e-842a-8e6b9d22a2d8
+  disabled: true
+- name: key_id
+  value: 7e7484f0-7878-4ef1-9f6d-87c23147d9b7
+externalSecrets:
+- alias: pass
+  connectionId: 50ad55f9-2865-4963-95bf-2abe4c4bf35c
+  vaultName: rocket-api-vault
+  secretNames:
+  - name: numericlabs-local-admin
+    secretId: a1088f8c-de6d-4416-ad70-cc58b3e98c76

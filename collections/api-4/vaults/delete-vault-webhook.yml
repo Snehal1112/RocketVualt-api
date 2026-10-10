@@ -9,3 +9,17 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+docs: |-
+  ## Delete Vault Webhook
+
+  Removes the webhook configuration of a vault.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `DELETE` |
+  | Path | `/api/v1/vaults/{vault_name}/webhook` |
+  | Auth | Requires a valid bearer token with vault management rights for this vault (a vault-scoped `vaults:manage` grant or the `Key Vault Administrator` role). |
+
+  **Parameters**
+
+  - `vault_name` (path): Name of the vault.

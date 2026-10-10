@@ -1,0 +1,9 @@
+id: cbc3cdc0-295b-4bef-bc07-71b029eeffc4
+method: DELETE
+url: https://api.rocketvault.numericlabs.io/api/v1/users/6308645d-87e6-4fd7-8204-861c5c518c97
+status: 200
+durationMs: 158
+responseSize: 16
+timestamp: 2026-09-27T06:31:16.534502151Z
+collection: api-4
+requestName: Delete User

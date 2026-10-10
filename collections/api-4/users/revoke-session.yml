@@ -9,3 +9,17 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+docs: |-
+  ## Revoke Session
+
+  Revokes one session of the current user.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `DELETE` |
+  | Path | `/api/v1/users/sessions/{session_id}` |
+  | Auth | Requires a valid bearer access token. |
+
+  **Parameters**
+
+  - `session_id` (path): UUID of the session.

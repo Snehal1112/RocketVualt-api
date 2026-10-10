@@ -1,0 +1,10 @@
+id: 4376f077-92e4-4be7-960f-e1c86b9323ec
+method: GET
+url: https://api.rocketvault.numericlabs.io/api/v1/oidc/login
+status: 503
+durationMs: 68
+responseSize: 23
+timestamp: 2026-10-10T05:52:46.970594069Z
+collection: api-4
+requestName: OIDC Login
+runSource: manual

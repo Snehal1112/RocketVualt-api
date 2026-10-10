@@ -9,3 +9,19 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+runtime: {}
+docs: |-
+  ## Get Role Assignment
+
+  Returns one role assignment in this vault.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `GET` |
+  | Path | `/api/v1/vaults/{vault_name}/role-assignments/{assignment_id}` |
+  | Auth | Requires a valid bearer token and permission to manage role assignments in this vault (global `admin`, a vault-scoped `vaults:manage` grant, or `Key Vault Data Access Administrator`). |
+
+  **Parameters**
+
+  - `vault_name` (path): Name of the vault.
+  - `assignment_id` (path): UUID of the role assignment.

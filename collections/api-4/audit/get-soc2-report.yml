@@ -9,3 +9,13 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+docs: |-
+  ## Get SOC 2 Report
+
+  Generates a SOC 2-oriented report from the audit log.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `GET` |
+  | Path | `/api/v1/audit/reports/soc2` |
+  | Auth | Requires a valid bearer token with the global `admin` role. |

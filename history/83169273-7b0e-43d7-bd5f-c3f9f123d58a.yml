@@ -1,0 +1,9 @@
+id: 83169273-7b0e-43d7-bd5f-c3f9f123d58a
+method: GET
+url: https://api.rocketvault.numericlabs.io/api/v1/vaults/numericlabs-api-vault/secrets?page=0&per_page=20
+status: 200
+durationMs: 382
+responseSize: 24
+timestamp: 2026-09-24T20:28:04.652728143Z
+collection: api-4
+requestName: List Secrets

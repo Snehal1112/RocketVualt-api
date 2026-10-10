@@ -1,0 +1,9 @@
+id: f952dcff-8d5c-4fc2-b2c1-abe950c35bf6
+method: PUT
+url: https://api.rocketvault.numericlabs.io/api/v1/vaults/rocket-api-vault/secrets/bb1feb01-7000-4836-8f23-10232bd9f2e5
+status: 200
+durationMs: 359
+responseSize: 178
+timestamp: 2026-09-24T15:22:55.605736918Z
+collection: api-4
+requestName: Update Secret

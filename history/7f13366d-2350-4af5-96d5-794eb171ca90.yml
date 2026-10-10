@@ -1,0 +1,9 @@
+id: 7f13366d-2350-4af5-96d5-794eb171ca90
+method: GET
+url: https://api.rocketvault.numericlabs.io/api/v1/vaults
+status: 200
+durationMs: 419
+responseSize: 1171
+timestamp: 2026-09-24T15:52:41.253019923Z
+collection: api-4
+requestName: List Vaults

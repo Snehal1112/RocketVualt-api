@@ -2,7 +2,52 @@ uid: 598ae373-3957-4103-a7a4-0e25f7e017b5
 info:
   name: Get Config
   type: http
-  seq: 1
 http:
   method: GET
   url: '{{base_url}}/api/v1/config'
+settings:
+  encodeUrl: true
+  timeout: 0.0
+  followRedirects: true
+  maxRedirects: 5.0
+  verifySsl: true
+docs: |-
+  ## Get Config
+
+  Returns the non-sensitive server settings that a web frontend needs. The values are set when the server starts.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `GET` |
+  | Path | `/api/v1/config` |
+  | Auth | None. This endpoint is public. |
+  | Rate limit | Limited per client IP. |
+
+  ### Response (200 OK)
+
+  ```json
+  {
+    "feature_flags": {
+      "<flag name>": true
+    },
+    "public_api_url": "<public API URL>",
+    "sentry_dsn": "<Sentry DSN>"
+  }
+  ```
+
+  | Field | Description |
+  | --- | --- |
+  | `feature_flags` | Map of feature flag names to booleans. It is `{}` when no flags are set. |
+  | `public_api_url` | Public URL of the API, for frontends. |
+  | `sentry_dsn` | Sentry DSN for frontend error reporting. It can be an empty string. |
+
+  ### Errors
+
+  | Status | Meaning |
+  | --- | --- |
+  | `429 Too Many Requests` | Too many requests from this IP. Wait before you retry. |
+
+  ### Notes
+
+  - **No secrets.** The response never contains passwords, keys, or tokens.
+  - **Empty config.** If the server has no frontend config, it returns `feature_flags` as `{}` and empty strings for the other fields.

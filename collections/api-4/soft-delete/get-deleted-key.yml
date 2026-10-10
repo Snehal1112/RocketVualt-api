@@ -9,3 +9,21 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+docs: |-
+  ## Get Deleted Key
+
+  Returns a soft-deleted key by ID.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `GET` |
+  | Path | `/api/v1/deleted/keys/{key_id}` |
+  | Auth | Requires a valid bearer access token. |
+
+  **Parameters**
+
+  - `key_id` (path): UUID of the key.
+
+  **Notes**
+
+  This endpoint is not vault-scoped. The key is looked up by ID.

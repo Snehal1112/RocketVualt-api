@@ -15,3 +15,21 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+docs: |-
+  ## Restore Key
+
+  Restores a key from a backup created by the backup endpoint.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `POST` |
+  | Path | `/api/v1/keys/restore` |
+  | Auth | Requires a valid bearer token and a role assignment in this vault that grants the matching data action. The global `admin` role does not bypass this check. |
+
+  **Request body**
+
+  ```json
+  {
+    "blob": "base64-encoded-backup-blob"
+  }
+  ```

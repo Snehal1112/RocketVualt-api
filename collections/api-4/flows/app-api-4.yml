@@ -1,0 +1,244 @@
+name: app-api-4
+nodes:
+- id: fc15102f-0b1a-49b9-b270-31ea21621194
+  kind:
+    kind: Request
+    label: Login
+    source:
+      type: Saved
+      request_path: auth/login.yml
+  position:
+    x: 225.84369783328268
+    y: -51.289048141100466
+- id: input-1790656167647-3
+  kind:
+    kind: Input
+    label: totp_code
+    value: '757183'
+  position:
+    x: -421.0
+    y: 219.0
+- id: output-1790657582044-1
+  kind:
+    kind: Output
+    label: Login user
+  position:
+    x: 1588.783980349194
+    y: 520.0489411538754
+- id: input-1790670806091-2
+  kind:
+    kind: Input
+    label: Custome Headers
+    value: databnase
+  position:
+    x: -371.1299553160529
+    y: -174.4605345251611
+- id: if-1790673807893-3
+  kind:
+    kind: If
+    label: totp_code condition
+    condition: response.body !== ""
+  position:
+    x: -148.34163224011385
+    y: 349.8948318019733
+- id: 5c25a397-68a1-4bf9-8dca-23e9a5b81786
+  kind:
+    kind: Request
+    label: List Users
+    source:
+      type: Saved
+      request_path: users/list-users.yml
+  position:
+    x: 1003.2135760057681
+    y: 41.68592508746079
+- id: output-1790674363130-4
+  kind:
+    kind: Output
+    label: List all users
+  position:
+    x: 1511.5134844785005
+    y: -300.6113458350473
+- id: if-1790674439811-5
+  kind:
+    kind: If
+    label: New If
+    condition: response.status === 200
+  position:
+    x: 560.5269623135105
+    y: 51.757954641252375
+- id: output-1790674535781-6
+  kind:
+    kind: Output
+    label: New Output
+  position:
+    x: 1076.6597082878936
+    y: -525.871275609639
+- id: transform-1790833356170-1
+  kind:
+    kind: Transform
+    label: New Transform
+    script: |-
+      const body = response.body;
+
+      const user1 = body.users[0];
+      return user1;
+  position:
+    x: 1577.385522416199
+    y: 196.465648603075
+- id: output-1790833465390-2
+  kind:
+    kind: Output
+    label: New Output
+  position:
+    x: 2247.7024702815934
+    y: 295.4384284631498
+- id: 38f65910-f70a-453b-a418-efea56d6787b
+  kind:
+    kind: Request
+    label: List Vaults
+    source:
+      type: Saved
+      request_path: vaults/list-vaults.yml
+  position:
+    x: 1009.330165998807
+    y: 644.9056610104344
+- id: output-1790837320912-1
+  kind:
+    kind: Output
+    label: List Vault Output
+  position:
+    x: 1599.1305455295017
+    y: 1078.29698836621
+- id: a6403949-12c4-4497-bd7b-94801741d116
+  kind:
+    kind: Request
+    label: Get User
+    source:
+      type: Saved
+      request_path: users/get-user.yml
+    debug: true
+  position:
+    x: 2089.295860383453
+    y: 1.832644802277052
+- id: output-1791373043372-1
+  kind:
+    kind: Output
+    label: New Output
+  position:
+    x: 2639.131832059459
+    y: -57.18081968475349
+- id: output-1791517032708-1
+  kind:
+    kind: Output
+    label: New Output
+  position:
+    x: 343.8330548901611
+    y: 633.264189730369
+edges:
+- id: 4f95118d-3688-43d9-b325-ed86dfe1c7e4
+  source_node_id: input-1790656167647-3
+  target_node_id: fc15102f-0b1a-49b9-b270-31ea21621194
+  target_field: body
+  expression: |-
+    const data = JSON.stringify({ username: '{{username}}', password: '{{pass.numericlabs-local-admin}}', totp_code: String(response.body) });
+    console.log("wire data:-", data);
+    return data;
+- id: 770b62cb-f076-4071-aa58-813df690f9b3
+  source_node_id: input-1790670806091-2
+  target_node_id: fc15102f-0b1a-49b9-b270-31ea21621194
+  target_field: headers[x-dummy-value].value
+  expression: response.body
+- id: 81e94c20-e43e-4583-ae0f-245e08418d65
+  source_node_id: input-1790656167647-3
+  target_node_id: if-1790673807893-3
+  target_field: input
+  expression: ''
+- id: f372a34e-d659-462d-8199-3030b4df7225
+  source_node_id: if-1790673807893-3
+  target_node_id: fc15102f-0b1a-49b9-b270-31ea21621194
+  target_field: trigger
+  expression: ''
+  source_handle: 'true'
+- id: a70e3c5d-4404-4a8f-9c6b-73c24653a38b
+  source_node_id: 5c25a397-68a1-4bf9-8dca-23e9a5b81786
+  target_node_id: output-1790674363130-4
+  target_field: value
+  expression: |-
+    const body = response.body;
+
+
+    return body;
+
+    // const user1 = body.users[0];
+
+    // //rok.setEnvVar("token", body.token);
+    // rok.setEnvVar("user1", user1.username)
+    // return user1;
+- id: cc84e7ee-136d-45bb-a1bc-e2f0a9705048
+  source_node_id: if-1790674439811-5
+  target_node_id: 5c25a397-68a1-4bf9-8dca-23e9a5b81786
+  target_field: trigger
+  expression: ''
+  source_handle: 'true'
+- id: a04a4fe1-086c-490b-8137-10250d7ecbf3
+  source_node_id: if-1790674439811-5
+  target_node_id: output-1790674535781-6
+  target_field: value
+  expression: response.body
+  source_handle: 'false'
+- id: 5d01c0c5-751b-4cb9-86ba-3005fdda2fc7
+  source_node_id: fc15102f-0b1a-49b9-b270-31ea21621194
+  target_node_id: if-1790674439811-5
+  target_field: input
+  expression: ''
+- id: 645bc350-4a7b-46fd-ae3f-4e687a7c6feb
+  source_node_id: if-1790674439811-5
+  target_node_id: output-1790657582044-1
+  target_field: value
+  expression: response.body
+  source_handle: 'true'
+- id: 7feb9154-78f4-490d-8a8c-1d9ebe6d1684
+  source_node_id: 5c25a397-68a1-4bf9-8dca-23e9a5b81786
+  target_node_id: transform-1790833356170-1
+  target_field: input
+  expression: ''
+- id: e3fd19fd-b530-4174-85bb-db32e11c9b6c
+  source_node_id: transform-1790833356170-1
+  target_node_id: output-1790833465390-2
+  target_field: value
+  expression: response.body
+- id: a945c4ae-8f05-449b-afdf-0ab07cc70ed1
+  source_node_id: if-1790674439811-5
+  target_node_id: 38f65910-f70a-453b-a418-efea56d6787b
+  target_field: trigger
+  expression: ''
+  source_handle: 'true'
+- id: bc3135ef-dd96-48a4-9f7b-fef5f4f3c4b1
+  source_node_id: 38f65910-f70a-453b-a418-efea56d6787b
+  target_node_id: output-1790837320912-1
+  target_field: value
+  expression: response.body
+- id: e8940582-4e3b-4406-b4f0-9349651c4054
+  source_node_id: a6403949-12c4-4497-bd7b-94801741d116
+  target_node_id: output-1791373043372-1
+  target_field: value
+  expression: response.body
+- id: 49c73f28-f3f7-4c43-8d81-1a65764837ce
+  source_node_id: transform-1790833356170-1
+  target_node_id: a6403949-12c4-4497-bd7b-94801741d116
+  target_field: url
+  expression: |-
+    const userID = response.body.id;
+    return `https://api.rocketvault.numericlabs.io/api/v1/users/${userID}`
+- id: e52d403b-c97d-410f-abba-b73ffbf92788
+  source_node_id: if-1790673807893-3
+  target_node_id: output-1791517032708-1
+  target_field: value
+  expression: response.body
+  source_handle: 'false'
+- id: cbbbc003-d889-48b3-a491-c9422f8ec353
+  source_node_id: if-1790674439811-5
+  target_node_id: 5c25a397-68a1-4bf9-8dca-23e9a5b81786
+  target_field: headers[Authorization].value
+  expression: '`Bearer ${response.body.token}`;'
+  source_handle: 'true'

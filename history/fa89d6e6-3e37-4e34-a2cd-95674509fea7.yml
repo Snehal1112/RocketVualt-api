@@ -1,0 +1,9 @@
+id: fa89d6e6-3e37-4e34-a2cd-95674509fea7
+method: GET
+url: https://api.rocketvault.numericlabs.io/api/v1/config
+status: 200
+durationMs: 301
+responseSize: 78
+timestamp: 2026-09-22T14:05:39.471916085Z
+collection: api-4
+requestName: Get Config

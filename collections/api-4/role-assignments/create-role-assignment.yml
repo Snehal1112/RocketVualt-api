@@ -2,7 +2,6 @@ uid: 788cb289-5f84-4aae-bb6b-610f48fdd6fd
 info:
   name: Create Role Assignment
   type: http
-  seq: 2
 http:
   method: POST
   url: '{{base_url}}/api/v1/vaults/{{vault_name}}/role-assignments'
@@ -11,9 +10,61 @@ http:
     data: |-
       {
         "principal": "{{user_id}}",
-        "principal_type": "user",
-        "role": "Key Vault Secrets User"
+        "principal_type": "{{principal_type}}",
+        "role": "{{vault_role}}"
       }
-  auth:
-    type: bearer
-    token: '{{token}}'
+  auth: inherit
+runtime:
+  variables:
+  - name: user_id
+    value: 7e3a3cdf-ba84-420e-842a-8e6b9d22a2d8
+    initial: bf5414b2-32c0-4606-b41c-16d2fb5f3e40
+  - name: vault_role
+    value: Key Vault Administrator
+    initial: Key Vault Secrets User
+  - name: principal_type
+    value: service_account
+    initial: user
+  scripts:
+  - type: before-request
+    code: |-
+      // const userID = rok.getCollectionVar("service_account_id");
+
+      // console.log("userID:-", userID);
+
+      // rok.setVar("user_id", userID);
+      // rok.setEnvVar("user_id", userID);
+settings:
+  encodeUrl: true
+  timeout: 0.0
+  followRedirects: true
+  maxRedirects: 5.0
+  verifySsl: true
+docs: |-
+  ## Create Role Assignment
+
+  Grants an Azure-style role to a principal in this vault.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `POST` |
+  | Path | `/api/v1/vaults/{vault_name}/role-assignments` |
+  | Auth | Requires a valid bearer token and permission to manage role assignments in this vault (global `admin`, a vault-scoped `vaults:manage` grant, or `Key Vault Data Access Administrator`). |
+
+  **Parameters**
+
+  - `vault_name` (path): Name of the vault.
+
+  **Request body**
+
+  ```json
+  {
+    "principal": "{{user_id}}",
+    "principal_type": "{{principal_type}}",
+    "role": "{{vault_role}}"
+  }
+  ```
+
+  **Notes**
+
+  Non-admin callers can grant only the roles they are allowed to grant.

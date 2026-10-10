@@ -1,0 +1,9 @@
+id: 710dc670-fa8b-40a2-8f3d-359356330e96
+method: POST
+url: https://api.rocketvault.numericlabs.io/api/v1/users
+status: 401
+durationMs: 263
+responseSize: 28
+timestamp: 2026-09-27T06:29:38.812418456Z
+collection: api-4
+requestName: Create User

@@ -6,3 +6,35 @@ info:
 http:
   method: GET
   url: '{{base_url}}/metrics'
+docs: |-
+  ## Get Metrics
+
+  Returns server metrics in the Prometheus text format. It is meant for Prometheus scrapers.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `GET` |
+  | Path | `/metrics` |
+  | Auth | None. This endpoint is public. |
+
+  ### Response (200 OK)
+
+  The body is plain text in the Prometheus exposition format, not JSON. Each metric has `# HELP` and `# TYPE` lines followed by its samples.
+
+  ```text
+  # HELP <metric name> <description>
+  # TYPE <metric name> <counter|gauge|histogram>
+  <metric name>{<labels>} <value>
+  ```
+
+  ### Errors
+
+  | Status | Meaning |
+  | --- | --- |
+  | `404 Not Found` | The metrics endpoint is turned off. |
+
+  ### Notes
+
+  - **Off by default.** The route exists only when `monitoring.enable_metrics` is true in the server config. Otherwise the server returns 404.
+  - **Path.** This route is `/metrics` at the server root. It is not under `/api/v1`.
+  - **No auth.** The endpoint skips the authentication middleware. Limit network access to it in production.

@@ -15,3 +15,25 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+docs: |-
+  ## Update Audit Config
+
+  Partially updates the audit configuration.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `PATCH` |
+  | Path | `/api/v1/audit/config` |
+  | Auth | Requires a valid bearer token with the global `admin` role. |
+
+  **Request body**
+
+  ```json
+  {
+    "retention_days": 365
+  }
+  ```
+
+  **Notes**
+
+  Uses `PATCH`, so only the sent fields change.

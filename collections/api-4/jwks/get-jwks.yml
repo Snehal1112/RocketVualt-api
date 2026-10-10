@@ -6,3 +6,48 @@ info:
 http:
   method: GET
   url: '{{base_url}}/jwks.json'
+docs: |-
+  ## Get JWKS
+
+  Returns the JSON Web Key Set (JWKS) with the public keys that verify access tokens. Clients and other services use it to check token signatures.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `GET` |
+  | Path | `/jwks.json` |
+  | Auth | None. This endpoint is public. |
+
+  ### Response (200 OK)
+
+  ```json
+  {
+    "keys": [
+      {
+        "kty": "<key type>",
+        "kid": "<key ID>",
+        "alg": "<algorithm>",
+        "use": "sig"
+      }
+    ]
+  }
+  ```
+
+  The example is shortened. Each entry also holds the public key parameters for its key type, as defined in RFC 7517.
+
+  | Field | Description |
+  | --- | --- |
+  | `keys` | List of all active public signing keys. During a key rotation, it can hold more than one key. |
+  | `keys[].kid` | Key ID. Match it with the `kid` in a token header to pick the right key. |
+
+  ### Errors
+
+  | Status | Meaning |
+  | --- | --- |
+  | `500 Internal Server Error` | The key set could not be built. The body is `{"error": "failed to build JWK set"}`. |
+  | `503 Service Unavailable` | No signing provider is available. The body is `{"error": "signing provider not available"}`. |
+
+  ### Notes
+
+  - **Public keys only.** The endpoint never returns private key material.
+  - **Path.** This route is `/jwks.json` at the server root. It is not under `/api/v1`.
+  - **Caching.** The response has `Cache-Control: public, max-age=3600`. Clients can cache it for one hour.

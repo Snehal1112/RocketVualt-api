@@ -13,25 +13,48 @@ http:
       }
 runtime:
   scripts:
+  - type: before-request
+    code: ''
   - type: after-response
-    code: |2-
+    code: |-
+      if (res.getStatus() >= 200 && res.getStatus() < 300) {
+        rok.setEnvVar("token", res.getBody().token);
 
-      const response = res.getBody();
-
-      console.log(response.token, "token");
-      rok.setEnvVar("token", response.token);
-
-      console.log(rok.getEnvName());
+      }
   assertions:
   - expression: res.status
     operator: eq
     value: '200'
+    disabled: false
   - expression: res.body.username
     operator: eq
     value: admin
+    disabled: false
 settings:
   encodeUrl: true
   timeout: 0.0
   followRedirects: true
   maxRedirects: 5.0
   verifySsl: true
+docs: |-
+  ## Refresh Token
+
+  Exchanges a refresh token for a new access token.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `POST` |
+  | Path | `/api/v1/users/refresh` |
+  | Auth | None. This endpoint is public. |
+
+  **Request body**
+
+  ```json
+  {
+    "refresh_token": "{{refresh_token}}"
+  }
+  ```
+
+  **Notes**
+
+  The refresh token is not rotated, so the same refresh token is returned. Roles are re-read from the database on each refresh.

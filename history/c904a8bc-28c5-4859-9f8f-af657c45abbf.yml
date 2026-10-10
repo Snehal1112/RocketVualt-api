@@ -1,0 +1,9 @@
+id: c904a8bc-28c5-4859-9f8f-af657c45abbf
+method: POST
+url: https://api.rocketvault.numericlabs.io/api/v1/service-accounts
+status: 201
+durationMs: 594
+responseSize: 291
+timestamp: 2026-09-22T16:25:43.801424407Z
+collection: api-4
+requestName: Create Service Account

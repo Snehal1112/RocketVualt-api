@@ -20,3 +20,30 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+docs: |-
+  ## Update Vault
+
+  Updates the settings of a vault.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `PATCH` |
+  | Path | `/api/v1/vaults/{vault_name}` |
+  | Auth | Requires a valid bearer token with vault management rights for this vault (a vault-scoped `vaults:manage` grant or the `Key Vault Administrator` role). |
+
+  **Parameters**
+
+  - `vault_name` (path): Name of the vault.
+
+  **Request body**
+
+  ```json
+  {
+    "enabled": true,
+    "purge_protection": true,
+    "retention_days": 30,
+    "tags": {
+      "env": "prod"
+    }
+  }
+  ```

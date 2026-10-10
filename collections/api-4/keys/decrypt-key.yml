@@ -17,3 +17,81 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+runtime:
+  scripts:
+  - type: tests
+    code: |-
+      // Status and response shape. The response field names are not confirmed,
+      // so only check that the body is a non-empty JSON object.
+      pm.test("status is 200 OK", function () {
+        pm.expect(pm.response.code).to.equal(200);
+      });
+
+      pm.test("content-type is JSON", function () {
+        pm.expect(pm.response.headers.get("Content-Type")).to.include("application/json");
+      });
+
+      pm.test("body is a non-empty JSON object", function () {
+        const body = pm.response.json();
+        pm.expect(body).to.be.an("object");
+        pm.expect(Object.keys(body).length).to.be.above(0);
+      });
+
+      pm.test("response time is under 2000 ms", function () {
+        pm.expect(pm.response.responseTime).to.be.below(2000);
+      });
+docs: |-
+  ## Decrypt Key
+
+  Decrypts ciphertext with a key stored in a vault. Use it after [Encrypt Key](./encrypt-key.yml) to recover plaintext, or to decrypt data that an application encrypted with the same key.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `POST` |
+  | Path | `/api/v1/vaults/{vault_name}/keys/{key_id}/decrypt` |
+  | Auth | Bearer token (`{{token}}`, inherited from the collection). The token needs a role assignment in this vault that grants the matching data action. The global `admin` role does not bypass this check. |
+
+  **Path parameters**
+
+  - `vault_name`: Name of the vault. Collection variable or environment variable `vault_name`.
+  - `key_id`: UUID of the key. Find it with [List Keys](./list-keys.yml) or [Get Key](./get-key.yml).
+
+  **Request body (JSON)**
+
+  | Field | Type | Description |
+  | --- | --- | --- |
+  | `value` | string (base64) | The ciphertext to decrypt. |
+  | `nonce` | string (base64) | The nonce that was used to produce `value`. Documented for AES-256-GCM. |
+  | `algorithm` | string | Decryption algorithm. The request template uses `RSA-OAEP`. |
+
+  ```json
+  {
+    "value": "<base64-encoded-ciphertext>",
+    "nonce": "<base64-encoded-nonce-for-AES256-GCM>",
+    "algorithm": "RSA-OAEP"
+  }
+  ```
+
+  > **Check before use:** `nonce` applies to AES-256-GCM, but `algorithm` is set to `RSA-OAEP`, which is an asymmetric scheme that takes no nonce. The template mixes the two. Send the `algorithm` and `nonce` pair that matches how the ciphertext was created. Confirm the correct pairing with the API owner before relying on this request.
+
+  **Example**
+
+  Encrypt a value, then decrypt it with the same key:
+
+  1. Run [Encrypt Key](./encrypt-key.yml) with `value` set to the base64 of your plaintext. Save the ciphertext from the response.
+  2. Set `value` in this request to that ciphertext. Set `nonce` and `algorithm` to the values used at encryption time.
+  3. Run the request. The response contains the decrypted data. Base64-decode it to get the original bytes.
+
+  ```bash
+  # Build the plaintext in base64
+  echo -n 'hello vault' | base64   # aGVsbG8gdmF1bHQ=
+  ```
+
+  **Common errors**
+
+  - `401 Unauthorized`: the bearer token is missing, expired, or invalid. Refresh it with [Refresh Token](../auth/refresh-token.yml).
+  - `403 Forbidden`: the token has no role assignment in this vault for the data action. Check [List Role Assignments](../role-assignments/list-role-assignments.yml).
+  - `404 Not Found`: the vault or key does not exist, or the key is soft-deleted. See [Get Deleted Key](../soft-delete/get-deleted-key.yml).
+  - `400 Bad Request`: `value`, `nonce`, or `algorithm` is not valid base64 or does not match the key's algorithm.
+
+  > The response schema and error codes above are not confirmed from a live call. Verify them by running the request against a test vault and update this section.

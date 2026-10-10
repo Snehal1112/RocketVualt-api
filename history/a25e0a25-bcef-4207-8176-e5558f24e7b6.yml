@@ -1,0 +1,9 @@
+id: a25e0a25-bcef-4207-8176-e5558f24e7b6
+method: POST
+url: https://api.rocketvault.numericlabs.io/api/v1/vaults/rocket-api-vault/role-assignments
+status: 201
+durationMs: 422
+responseSize: 285
+timestamp: 2026-09-24T15:36:50.346647620Z
+collection: api-4
+requestName: Create Role Assignment

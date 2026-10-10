@@ -1,0 +1,9 @@
+id: 37a1537a-9720-4d4a-81d3-d1edee9cc105
+method: GET
+url: https://api.rocketvault.numericlabs.io/api/v1/vaults/my-vault/certificates?page=0&per_page=20
+status: 403
+durationMs: 347
+responseSize: 66
+timestamp: 2026-09-22T14:06:19.709177515Z
+collection: api-4
+requestName: List Certificates

@@ -1,0 +1,9 @@
+id: 9b6d1b2c-7683-49a7-99ee-a9c9e89f1b52
+method: POST
+url: https://api.rocketvault.numericlabs.io/api/v1/vaults/rocket-api-vault/keys
+status: 201
+durationMs: 290
+responseSize: 288
+timestamp: 2026-10-07T11:47:26.493868648Z
+collection: api-4
+requestName: Create Key

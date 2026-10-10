@@ -9,3 +9,13 @@ http:
   auth:
     type: bearer
     token: '{{token}}'
+docs: |-
+  ## List Vault Provisioning Grants
+
+  Lists the vault provisioning grants.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `GET` |
+  | Path | `/api/v1/vault-provisioning-grants` |
+  | Auth | Requires a valid bearer token with the global `admin` role. |

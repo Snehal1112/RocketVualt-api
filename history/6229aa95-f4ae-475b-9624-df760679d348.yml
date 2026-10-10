@@ -1,0 +1,9 @@
+id: 6229aa95-f4ae-475b-9624-df760679d348
+method: GET
+url: https://api.rocketvault.numericlabs.io/api/v1/users?page=0&per_page=20
+status: 200
+durationMs: 275
+responseSize: 390
+timestamp: 2026-09-29T10:39:31.513348904Z
+collection: api-4
+requestName: List Users

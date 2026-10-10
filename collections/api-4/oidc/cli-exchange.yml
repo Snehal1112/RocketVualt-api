@@ -21,3 +21,25 @@ runtime:
         bru.setEnvVar("token", res.token);
         console.log("Token captured successfully");
       }
+docs: |-
+  ## OIDC CLI Exchange
+
+  Exchanges a one-time code for tokens during the CLI OIDC login.
+
+  | Field | Value |
+  | --- | --- |
+  | Method | `POST` |
+  | Path | `/api/v1/oidc/cli/exchange` |
+  | Auth | None. This endpoint is public. |
+
+  **Request body**
+
+  ```json
+  {
+    "code": "{{oidc_cli_code}}"
+  }
+  ```
+
+  **Notes**
+
+  Codes are single use. Unknown, expired, or used codes return `410 Gone`.
