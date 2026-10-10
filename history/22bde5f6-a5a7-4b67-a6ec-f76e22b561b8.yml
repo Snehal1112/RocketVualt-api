@@ -1,0 +1,10 @@
+id: 22bde5f6-a5a7-4b67-a6ec-f76e22b561b8
+method: GET
+url: https://api.rocketvault.numericlabs.io/api/v1/users/d9ccf32d-94b8-4014-ac56-648cccf60904
+status: 200
+durationMs: 88
+responseSize: 119
+timestamp: 2026-10-10T17:15:44.816477067Z
+collection: api-4
+requestName: Get User
+runSource: flow

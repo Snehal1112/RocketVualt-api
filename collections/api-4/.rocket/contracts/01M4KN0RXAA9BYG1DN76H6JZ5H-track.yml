@@ -1,0 +1,68 @@
+contractId: 01M4KN0RXAA9BYG1DN76H6JZ5H
+entries:
+- requestPath: access-policies/create-policy.yml
+  method: POST
+  urlPattern: '{{base_url}}/api/v1/vaults/{{vault_name}}/access-policies'
+  headers: []
+  queryParams: []
+  bodyContent: |-
+    {
+      "principal_id": "{{user_id}}",
+      "principal_type": "user",
+      "resource_type": "secrets",
+      "operation": "get",
+      "effect": "allow"
+    }
+  formFields: []
+  authType: bearer
+  authDetail: '{{token}…'
+  capturedAt: 2026-10-10T19:35:42.299092578Z
+- requestPath: access-policies/delete-policy.yml
+  method: DELETE
+  urlPattern: '{{base_url}}/api/v1/vaults/{{vault_name}}/access-policies/{{policy_id}}'
+  headers: []
+  queryParams: []
+  formFields: []
+  authType: bearer
+  authDetail: '{{token}…'
+  capturedAt: 2026-10-10T19:35:42.299117065Z
+- requestPath: access-policies/get-policy.yml
+  method: GET
+  urlPattern: '{{base_url}}/api/v1/vaults/{{vault_name}}/access-policies/{{policy_id}}'
+  headers: []
+  queryParams: []
+  formFields: []
+  authType: bearer
+  authDetail: '{{token}…'
+  capturedAt: 2026-10-10T19:35:42.299125501Z
+- requestPath: access-policies/list-by-principal.yml
+  method: GET
+  urlPattern: '{{base_url}}/api/v1/vaults/{{vault_name}}/access-policies/principal/{{principal_id}}'
+  headers: []
+  queryParams: []
+  formFields: []
+  authType: bearer
+  authDetail: '{{token}…'
+  capturedAt: 2026-10-10T19:35:42.299129709Z
+- requestPath: access-policies/list-policies.yml
+  method: GET
+  urlPattern: '{{base_url}}/api/v1/vaults/{{vault_name}}/access-policies'
+  headers: []
+  queryParams: []
+  formFields: []
+  authType: bearer
+  authDetail: '{{token}…'
+  capturedAt: 2026-10-10T19:35:42.299133667Z
+- requestPath: access-policies/update-policy.yml
+  method: PUT
+  urlPattern: '{{base_url}}/api/v1/vaults/{{vault_name}}/access-policies/{{policy_id}}'
+  headers: []
+  queryParams: []
+  bodyContent: |-
+    {
+      "effect": "deny"
+    }
+  formFields: []
+  authType: bearer
+  authDetail: '{{token}…'
+  capturedAt: 2026-10-10T19:35:42.299139618Z

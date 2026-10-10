@@ -1,0 +1,26 @@
+id: 01M4KN0RXAA9BYG1DN76H6JZ5H
+title: Access-Policies-contract
+provider:
+  id: rocketvault
+  name: RocketVault
+  kind: team
+consumers:
+- id: rocketapi
+  name: RocketApi
+  kind: team
+project: ''
+version: 0.1.1
+status: active
+effectiveDate: 2026-10-10
+enforcementMode: informational
+scope:
+  type: folder
+  rel_path: access-policies
+policy:
+  breakingChangePolicy: lenient
+  noticeDays: 30
+driftCount: 0
+breachCount: 0
+endpointCount: 6
+createdAt: 2026-10-10T19:35:42.250262420Z
+updatedAt: 2026-10-10T19:35:42.250262420Z
