@@ -17,26 +17,21 @@ http:
     type: bearer
     token: '{{token}}'
 docs: |-
-  ## Update Key
+  # Update Key
 
-  Updates the properties of a key.
+  `PUT {{base_url}}/api/v1/vaults/{{vault_name}}/keys/{{key_id}}`
 
-  | Field | Value |
-  | --- | --- |
-  | Method | `PUT` |
-  | Path | `/api/v1/vaults/{vault_name}/keys/{key_id}` |
-  | Auth | Requires a valid bearer token and a role assignment in this vault that grants the matching data action. The global `admin` role does not bypass this check. |
+  Changes a key's name and tags.
 
-  **Parameters**
+  ## Requires
+  - `key_id`: the key to update.
 
-  - `vault_name` (path): Name of the vault.
-  - `key_id` (path): UUID of the key.
+  ## Auth
+  Bearer `{{token}}`.
 
-  **Request body**
+  ## Body (JSON)
+  - `name` (string): new name.
+  - `tags` (string[]): new tags. The example changes `env:dev` to `env:prod`.
 
-  ```json
-  {
-    "name": "my-rsa-key-updated",
-    "tags": ["env:prod"]
-  }
-  ```
+  ## Notes
+  - The request body sends both fields. Check whether omitted fields are left unchanged before sending only one of them.

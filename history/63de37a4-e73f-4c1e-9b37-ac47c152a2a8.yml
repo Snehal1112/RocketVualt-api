@@ -1,0 +1,10 @@
+id: 63de37a4-e73f-4c1e-9b37-ac47c152a2a8
+method: PUT
+url: https://api.rocketvault.numericlabs.io/api/v1/vaults/numericlabs-api-vault/secrets/25b9c916-bae2-470e-a243-5c0298153b08
+status: 404
+durationMs: 1161
+responseSize: 28
+timestamp: 2026-10-10T23:06:42.353741936Z
+collection: api-4
+requestName: Update Secret
+runSource: manual

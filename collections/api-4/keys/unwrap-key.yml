@@ -17,26 +17,20 @@ http:
     type: bearer
     token: '{{token}}'
 docs: |-
-  ## Unwrap Key
+  # Unwrap Key
 
-  Unwraps key material that was wrapped with this key.
+  `POST {{base_url}}/api/v1/vaults/{{vault_name}}/keys/{{key_id}}/unwrap`
 
-  | Field | Value |
-  | --- | --- |
-  | Method | `POST` |
-  | Path | `/api/v1/vaults/{vault_name}/keys/{key_id}/unwrap` |
-  | Auth | Requires a valid bearer token and a role assignment in this vault that grants the matching data action. The global `admin` role does not bypass this check. |
+  Unwraps (decrypts) key material that was wrapped with Wrap Key.
 
-  **Parameters**
+  ## Requires
+  - `key_id`: the wrapping key used to wrap the material.
 
-  - `vault_name` (path): Name of the vault.
-  - `key_id` (path): UUID of the key.
+  ## Auth
+  Bearer `{{token}}`.
 
-  **Request body**
+  ## Body (JSON)
+  - `wrapped_key` (string): base64-encoded wrapped bytes.
+  - `algorithm` (string): the example uses `RSA-OAEP`.
 
-  ```json
-  {
-    "wrapped_key": "<base64-encoded-wrapped-bytes>",
-    "algorithm": "RSA-OAEP"
-  }
-  ```
+  The response format is not documented in the collection.

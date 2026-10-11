@@ -1,0 +1,10 @@
+id: c8abbad4-e713-42a3-a0ae-be628e25eb57
+method: GET
+url: https://api.rocketvault.numericlabs.io/api/v1/vaults/rocket-api-vault/keys/7e7484f0-7878-4ef1-9f6d-87c23147d9b7
+status: 200
+durationMs: 387
+responseSize: 288
+timestamp: 2026-10-10T23:10:57.068842632Z
+collection: api-4
+requestName: Get Key
+runSource: manual

@@ -22,34 +22,22 @@ http:
     type: bearer
     token: '{{token}}'
 docs: |-
-  ## Import Key
+  # Import Key
 
-  Imports an external key in JWK format.
+  `POST {{base_url}}/api/v1/vaults/{{vault_name}}/keys/import`
 
-  | Field | Value |
-  | --- | --- |
-  | Method | `POST` |
-  | Path | `/api/v1/vaults/{vault_name}/keys/import` |
-  | Auth | Requires a valid bearer token and a role assignment in this vault that grants the matching data action. The global `admin` role does not bypass this check. |
+  Imports an existing key into the vault as a JSON Web Key (JWK).
 
-  **Parameters**
+  ## Auth
+  Bearer `{{token}}`.
 
-  - `vault_name` (path): Name of the vault.
+  ## Body (JSON)
+  - `name` (string): name of the imported key.
+  - `jwk` (object): the key in JWK form. For RSA, the fields are `kty` (`RSA`), `n` (modulus), and `e` (exponent).
+  - `tags` (string[]): optional labels.
 
-  **Request body**
+  The example `n` value is a sample. Replace it with your own key before use.
 
-  ```json
-  {
-    "name": "imported-rsa-key",
-    "jwk": {
-      "kty": "RSA",
-      "n": "0vx7agoebGcQSuuPiLJXZptN9nndrQmbXEps2aiAFbWhM78LhWx4cbbfAAtVT86zwu1RK7aPFFxuhDR1L6tSoc_BJECPebWKRXjBZCiFV4n3oknjhMstn64tZ_2W-5JsGY4Hc5n9yBXArwl93lqt7_RN5w6Cf0h4QyQ5v-65YGjQR0_FDW2QvzqY368QQMicAtaSqzs8KJZgnYb9c7d0zgdAZHzu6qMQvRL5hajrn1n91CbOpbISD08qNLyrdkt-bFTWhAI4vMQFh6WeZu0fM4lFd2NcRwr3XPksINHaQ-G_xBniIqbw0Ls1jF44-csFCur-kEgU8awapJzKnqDKgw",
-      "e": "AQAB"
-    },
-    "tags": ["env:dev"]
-  }
-  ```
-
-  **Notes**
-
-  The RSA key size is validated during import.
+  ## Notes
+  - The example contains only public key fields (`kty`, `n`, `e`).
+  - The response format is not documented in the collection.

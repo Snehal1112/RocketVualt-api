@@ -17,26 +17,20 @@ http:
     type: bearer
     token: '{{token}}'
 docs: |-
-  ## Sign Key
+  # Sign Key
 
-  Signs data with a key.
+  `POST {{base_url}}/api/v1/vaults/{{vault_name}}/keys/{{key_id}}/sign`
 
-  | Field | Value |
-  | --- | --- |
-  | Method | `POST` |
-  | Path | `/api/v1/vaults/{vault_name}/keys/{key_id}/sign` |
-  | Auth | Requires a valid bearer token and a role assignment in this vault that grants the matching data action. The global `admin` role does not bypass this check. |
+  Signs data with the key.
 
-  **Parameters**
+  ## Requires
+  - `key_id`.
 
-  - `vault_name` (path): Name of the vault.
-  - `key_id` (path): UUID of the key.
+  ## Auth
+  Bearer `{{token}}`.
 
-  **Request body**
+  ## Body (JSON)
+  - `value` (string): base64-encoded data to sign.
+  - `algorithm` (string): the example uses `RS256`.
 
-  ```json
-  {
-    "value": "<base64-encoded-data-to-sign>",
-    "algorithm": "RS256"
-  }
-  ```
+  The response contains the signature. Pass it to Verify Key.

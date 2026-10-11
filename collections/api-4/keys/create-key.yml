@@ -25,21 +25,20 @@ settings:
   maxRedirects: 5.0
   verifySsl: true
 docs: |-
-  ## Create Key
+  # Create Key
 
-  Creates a new RSA or ECDSA key in this vault.
+  `POST {{base_url}}/api/v1/vaults/{{vault_name}}/keys`
 
-  | Field | Value |
-  | --- | --- |
-  | Method | `POST` |
-  | Path | `/api/v1/vaults/{vault_name}/keys` |
-  | Auth | Requires a valid bearer token and a role assignment in this vault that grants the matching data action. The global `admin` role does not bypass this check. |
+  Creates a new key in the vault.
 
-  **Parameters**
+  ## Auth
+  Bearer `{{token}}`.
 
-  - `vault_name` (path): Name of the vault.
-
-  **Request body**
+  ## Body (JSON)
+  - `name` (string): display name of the key.
+  - `type` (string): key type. The example uses `RSA`.
+  - `bits` (number): key size for RSA. The example uses `2048`.
+  - `tags` (string[]): labels, such as `env:dev`.
 
   ```json
   {
@@ -47,6 +46,9 @@ docs: |-
     "type": "RSA",
     "bits": 2048,
     "tags": ["env:dev"]
-
   }
   ```
+
+  ## Notes
+  - The response format is not documented in the collection. Save the returned `id` to the `key_id` variable.
+  - To bring in existing key material, use Import Key instead.

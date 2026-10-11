@@ -10,18 +10,42 @@ http:
     type: bearer
     token: '{{token}}'
 docs: |-
-  ## List Keys
+  # List Keys
 
-  Lists keys in this vault.
+  `GET {{base_url}}/api/v1/vaults/{{vault_name}}/keys?page=0&per_page=20`
 
-  | Field | Value |
-  | --- | --- |
-  | Method | `GET` |
-  | Path | `/api/v1/vaults/{vault_name}/keys?page=0&per_page=20` |
-  | Auth | Requires a valid bearer token and a role assignment in this vault that grants the matching data action. The global `admin` role does not bypass this check. |
+  Returns a paginated list of keys in the vault `{{vault_name}}`.
 
-  **Parameters**
+  ## Parameters
+  - `page` (query, default `0`): zero-based page index.
+  - `per_page` (query, default `20`): items per page.
 
-  - `vault_name` (path): Name of the vault.
-  - `page` (query): Page number, starting from `0`.
-  - `per_page` (query): Number of items per page.
+  ## Auth
+  Bearer `{{token}}`.
+
+  ## Usage
+  1. Select an environment (`local`, `numericlabs-local`, `staging`, or `production`).
+  2. Get a `token` by running `auth/login`.
+  3. Run this request to find the `id` of the key you want.
+  4. Copy the `id` into the `key_id` variable for the other key requests.
+
+  ---
+
+  ## About the Keys folder
+
+  The `keys` folder manages keys in a vault and uses them for cryptographic operations (encrypt, decrypt, sign, verify, wrap, unwrap).
+
+  **Requests in this folder:**
+  - Key management: List Keys, Create Key, Import Key, Get Key, Update Key, Delete Key, List Key Versions, Rotate Key.
+  - Cryptographic operations: Encrypt Key, Decrypt Key, Sign Key, Verify Key, Wrap Key, Unwrap Key.
+  - Rotation policy: Get, Upsert, and Delete Key Rotation Policy.
+
+  **Variables required:**
+  - `base_url`: API host.
+  - `vault_name`: vault that holds the keys.
+  - `token`: bearer token (from `auth/login`).
+  - `key_id`: the key to act on (from List Keys or Create Key).
+
+  Keys are scoped to one vault. Requests that take `key_id` act on that key only.
+
+  See each request's docs for body fields and algorithms.

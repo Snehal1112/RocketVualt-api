@@ -1,3 +1,27 @@
-name: keys
-uid: 2a60af90-81f5-4166-a422-5019179a2de9
-type: folder
+info:
+  name: keys
+  uid: 2a60af90-81f5-4166-a422-5019179a2de9
+  type: folder
+docs: |-
+  # Keys
+
+  Manages keys in a vault and uses them for cryptographic operations: encrypt, decrypt, sign, verify, wrap, and unwrap.
+
+  ## Setup
+  1. Select an environment.
+  2. Run `auth/login` to set `token`.
+  3. Set `vault_name` to the vault you want to use.
+  4. Run **List Keys** and copy a key's `id` into `key_id`.
+
+  ## Variables
+  - `base_url`: API host
+  - `vault_name`: vault that holds the keys
+  - `token`: bearer token
+  - `key_id`: the key to act on
+
+  ## Requests
+  - **Key management:** List Keys, Create Key, Import Key, Get Key, Update Key, Delete Key, List Key Versions, Rotate Key
+  - **Cryptographic operations:** Encrypt, Decrypt, Sign, Verify, Wrap, Unwrap
+  - **Rotation policy:** Get, Upsert, Delete
+
+  See each request's docs for body fields and algorithms. Known issues are listed there too (Encrypt has no auth set; Decrypt's algorithm needs confirmation).

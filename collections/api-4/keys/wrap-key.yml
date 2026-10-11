@@ -17,26 +17,20 @@ http:
     type: bearer
     token: '{{token}}'
 docs: |-
-  ## Wrap Key
+  # Wrap Key
 
-  Wraps key material with this key.
+  `POST {{base_url}}/api/v1/vaults/{{vault_name}}/keys/{{key_id}}/wrap`
 
-  | Field | Value |
-  | --- | --- |
-  | Method | `POST` |
-  | Path | `/api/v1/vaults/{vault_name}/keys/{key_id}/wrap` |
-  | Auth | Requires a valid bearer token and a role assignment in this vault that grants the matching data action. The global `admin` role does not bypass this check. |
+  Wraps (encrypts) key material with the key, for example to move a key securely to another system.
 
-  **Parameters**
+  ## Requires
+  - `key_id`: the wrapping key.
 
-  - `vault_name` (path): Name of the vault.
-  - `key_id` (path): UUID of the key.
+  ## Auth
+  Bearer `{{token}}`.
 
-  **Request body**
+  ## Body (JSON)
+  - `plaintext_key` (string): base64-encoded key material to wrap.
+  - `algorithm` (string): the example uses `RSA-OAEP`.
 
-  ```json
-  {
-    "plaintext_key": "<base64-encoded-key-material>",
-    "algorithm": "RSA-OAEP"
-  }
-  ```
+  Use Unwrap Key to reverse this.

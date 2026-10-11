@@ -1,0 +1,10 @@
+id: 7af1fc68-b68a-4a6e-8008-6a6b95033a91
+method: POST
+url: https://api.rocketvault.numericlabs.io/api/v1/service-accounts/7e3a3cdf-ba84-420e-842a-8e6b9d22a2d8/rotate
+status: 200
+durationMs: 356
+responseSize: 85
+timestamp: 2026-10-10T23:44:48.866659779Z
+collection: api-4
+requestName: Rotate Service Account Secret
+runSource: manual

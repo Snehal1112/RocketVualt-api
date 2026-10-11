@@ -10,17 +10,17 @@ http:
     type: bearer
     token: '{{token}}'
 docs: |-
-  ## List Key Versions
+  # List Key Versions
 
-  Lists the versions of a key.
+  `GET {{base_url}}/api/v1/vaults/{{vault_name}}/keys/{{key_id}}/versions`
 
-  | Field | Value |
-  | --- | --- |
-  | Method | `GET` |
-  | Path | `/api/v1/vaults/{vault_name}/keys/{key_id}/versions` |
-  | Auth | Requires a valid bearer token and a role assignment in this vault that grants the matching data action. The global `admin` role does not bypass this check. |
+  Lists the versions of a key. Each rotation creates a new version.
 
-  **Parameters**
+  ## Requires
+  - `key_id`.
 
-  - `vault_name` (path): Name of the vault.
-  - `key_id` (path): UUID of the key.
+  ## Auth
+  Bearer `{{token}}`.
+
+  ## Notes
+  - The response format is not documented in the collection.
