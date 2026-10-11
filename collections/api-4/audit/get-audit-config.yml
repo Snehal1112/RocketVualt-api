@@ -12,10 +12,26 @@ http:
 docs: |-
   ## Get Audit Config
 
-  Returns the current audit configuration.
+  Returns the current audit configuration. Use it to read settings such as log retention before changing them with [Update Audit Config](audit/update-audit-config.yml).
 
   | Field | Value |
   | --- | --- |
   | Method | `GET` |
   | Path | `/api/v1/audit/config` |
   | Auth | Requires a valid bearer token with the global `admin` role. |
+  | Request body | None |
+  | Query parameters | None |
+
+  ### Authorization
+
+  Send the token as `Authorization: Bearer <token>`. The collection passes it from the `{{token}}` variable. A missing, expired, or non-admin token is rejected.
+
+  ### Related requests
+
+  - `PATCH /api/v1/audit/config`: updates these settings (for example `retention_days`).
+  - `GET /api/v1/audit/logs`: reads the audit events that these settings govern.
+
+  ### Notes
+
+  - This is a read-only call. It does not change any state.
+  - The response schema is not documented here yet. Add the response fields and an example response once they are confirmed.

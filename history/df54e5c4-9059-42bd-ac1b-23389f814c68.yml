@@ -1,0 +1,10 @@
+id: df54e5c4-9059-42bd-ac1b-23389f814c68
+method: GET
+url: https://api.rocketvault.numericlabs.io/api/v1/vaults/rocket-api-vault/secrets/25b9c916-bae2-470e-a243-5c0298153b08
+status: 200
+durationMs: 101
+responseSize: 331
+timestamp: 2026-10-10T23:56:08.110212Z
+collection: api-4
+requestName: Get Secret
+runSource: manual

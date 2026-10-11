@@ -11,6 +11,7 @@ http:
       {
         "refresh_token": "{{refresh_token}}"
       }
+  auth: inherit
 runtime:
   scripts:
   - type: before-request
@@ -18,9 +19,60 @@ runtime:
   - type: after-response
     code: |-
       if (res.getStatus() >= 200 && res.getStatus() < 300) {
+        console.log("called post response script");
         rok.setEnvVar("token", res.getBody().token);
-
       }
+  - type: tests
+    code: |-
+      // Refresh Token: assertions for a valid {{refresh_token}} obtained from Login
+      function assert(cond, msg) {
+        if (!cond) throw new Error(msg);
+      }
+
+      function decodeJwtPayload(jwt) {
+        const part = jwt.split(".")[1].replace(/-/g, "+").replace(/_/g, "/");
+        return JSON.parse(atob(part));
+      }
+
+      const body = res.getBody() || {};
+      const token = typeof body.token === "string" ? body.token : "";
+
+      rok.test("Status is 200", () => {
+        assert(res.getStatus() === 200, `Expected 200, got ${res.getStatus()}`);
+      });
+
+      rok.test("Response body is a JSON object", () => {
+        assert(typeof res.getBody() === "object" && res.getBody() !== null, "Body is not a JSON object");
+      });
+
+      rok.test("Returns a non-empty access token", () => {
+        assert(token.length > 0, "token missing or empty");
+      });
+
+      rok.test("Access token is a JWT (3 dot-separated parts)", () => {
+        assert(token.split(".").length === 3, "token is not a JWT");
+      });
+
+      rok.test("JWT payload has sub and a future exp", () => {
+        const payload = decodeJwtPayload(token);
+        assert(payload.sub, "sub claim missing");
+        assert(payload.exp > Math.floor(Date.now() / 1000), "token already expired");
+      });
+
+      rok.test("Refresh token is returned unchanged (not rotated)", () => {
+        assert(typeof body.refresh_token === "string", "refresh_token missing from response");
+        assert(body.refresh_token === rok.getEnvVar("refresh_token"), "refresh_token changed");
+      });
+
+      rok.test("Token env var was updated by post-response script", () => {
+        console.log(rok.getEnvVar("token"), "Env token");
+        console.log(token, "Request Body token");
+        assert(rok.getEnvVar("token") === token, "env token does not match response");
+      });
+
+      rok.test("Response time under 2s", () => {
+        assert(res.getTime() < 2000, `Too slow: ${res.getTime()}ms`);
+      });
   assertions:
   - expression: res.status
     operator: eq
@@ -28,7 +80,7 @@ runtime:
     disabled: false
   - expression: res.body.username
     operator: eq
-    value: admin
+    value: admin@numericlabs
     disabled: false
 settings:
   encodeUrl: true
